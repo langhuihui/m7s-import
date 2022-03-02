@@ -1,0 +1,56 @@
+//to reset element-ui default css
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+//暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+//element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// tooltip浮窗最大宽度限制
+.el-tooltip__popper {
+  max-width: 80%;
+}
+
+//重新定义按钮样式
+.el-button.el-button--primary:not(.is-plain) {
+  background-color: #456fff !important;
+  border-color: #456fff !important;
+}
+
+// .el-button.el-button--primary:hover:not(.is-plain) {
+//   background-color: #6c8eff !important;
+//   border-color: #6c8eff !important;
+// }
+
+.el-button.el-button--primary.is-disabled:not(.is-plain) {
+  background-color: #6c8eff !important;
+  border-color: #6c8eff !important;
+}
+
+//重新定义分页样式
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: #456fff !important;
+}

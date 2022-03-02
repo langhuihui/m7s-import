@@ -1,0 +1,91 @@
+.project {
+  .section {
+    &:nth-child(odd) {
+      background-color: #fff;
+    }
+
+    &:nth-child(even) {
+      background-color: #f3f6fc;
+    }
+
+    .container {
+      &.reverse {
+        flex-direction: row-reverse;
+
+        .img {
+          margin-right: 44px;
+          margin-left: 199px;
+        }
+
+        .intro {
+          margin-left: 0;
+        }
+      }
+
+      width: 1190px;
+      margin: 0 auto;
+      height: 460px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .img {
+        margin-left: 44px;
+        width: 256px;
+        height: 210px;
+      }
+
+      .intro {
+        width: 315px;
+        margin-left: 211px;
+        font-family: HYQiHei-FZS;
+        font-weight: normal;
+        font-stretch: normal;
+        letter-spacing: 0px;
+
+        .title {
+          font-size: 27px;
+          color: #303133;
+        }
+
+        .info {
+          height: 72px;
+          font-size: 13px;
+          color: #727485;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 18px;
+          margin: 22px 0;
+        }
+
+        .more {
+          position: relative;
+
+          .button {
+            display: inline-block;
+            cursor: pointer;
+            width: 96px;
+            height: 32px;
+            line-height: 32px;
+            background-color: #456fff;
+            border-radius: 16px;
+            font-family: MicrosoftYaHei;
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+            z-index: 4545;
+            box-shadow: 0 5px 4px -1px rgba(69, 111, 255, 0.44);
+
+            &:hover {
+              background-color: #688aff;
+            }
+
+            &:active {
+              background-color: #688aff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
