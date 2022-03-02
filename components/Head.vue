@@ -4,32 +4,32 @@ import {
 } from "element-plus/dist/index.full.js";
 import { ArrowDown } from "@element-plus/icons-vue";
 
-import { ref } from 'vue'
-import data from '../data/mock'
-const headerFixed = ref(false)
-const config = ref(data)
+import { ref } from 'vue';
+import data from '../data/mock';
+const headerFixed = ref(false);
+const config = ref(data);
 function showNav(event, bool) {
   if (bool) {
-    event.target.children[1].style.display = 'block'
+    event.target.children[1].style.display = 'block';
   } else {
     this.timeoutID = setTimeout(() => {
-      event.target.children[1].style.display = 'none'
-    }, 70)
+      event.target.children[1].style.display = 'none';
+    }, 70);
   }
 }
 function keepShowNav(event, bool) {
   if (bool) {
-    window.clearTimeout(this.timeoutID)
-    event.target.style.display = 'block'
+    window.clearTimeout(this.timeoutID);
+    event.target.style.display = 'block';
   } else {
-    event.target.style.display = 'none'
+    event.target.style.display = 'none';
   }
 }
 function goHome() {
   if (this.$route.path !== '/index') {
     this.$router.push({
       path: `/`
-    })
+    });
   }
 }
 </script>
@@ -41,6 +41,7 @@ function goHome() {
       <div class="top">
         <div class="logo" @click="goHome">
           <img src="~@/assets/logo.png" alt />
+          <div style="position:absolute; top: 12px;left: 40px;font-size: 22px;">Monibuca</div>
         </div>
         <div class="nav-contain">
           <ul class="nav">
@@ -52,21 +53,24 @@ function goHome() {
               @mouseenter="showNav($event, true)"
               @mouseleave="showNav($event, false)"
             >
-              {{ item.name }}
-              <el-icon class="el-icon-arrow-down">
-                <ArrowDown />
-              </el-icon>
-              <div
-                class="nav-sheet-container"
-                @mouseenter="keepShowNav($event, true)"
-                @mouseleave="keepShowNav($event, false)"
-              >
-                <div class="nav-sheet-items">
-                  <div v-for="(j, i) in item.children" :key="i" class="nav-sheet-item">
-                    <a :href="j.uri" target="_blank" rel="noopener noreferrer">{{ j.name }}</a>
+              <template v-if="item.children">
+                {{ item.name }}
+                <el-icon class="el-icon-arrow-down">
+                  <ArrowDown />
+                </el-icon>
+                <div
+                  class="nav-sheet-container"
+                  @mouseenter="keepShowNav($event, true)"
+                  @mouseleave="keepShowNav($event, false)"
+                >
+                  <div class="nav-sheet-items">
+                    <div v-for="(j, i) in item.children" :key="i" class="nav-sheet-item">
+                      <a :href="j.uri" target="_blank" rel="noopener noreferrer">{{ j.name }}</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </template>
+              <a v-else :href="item.uri" target="_blank">{{item.name}}</a>
             </li>
           </ul>
         </div>

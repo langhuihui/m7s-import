@@ -1,103 +1,25 @@
 const data = [
   {
-    name: "产品",
-    children: [
-      {
-        name: "monibuca",
-        uri: "http://baidu.com",
-      },
-      {
-        name: "rebebuca",
-        uri: "http://baidu.com",
-      },
-      {
-        name: "jessibuca",
-        uri: "http://baidu.com",
-      },
-    ],
+    name: "文档",
+    uri:"https://docs.m7s.live",
   },
   {
-    name: "开发",
-    children: [
-      {
-        name: "插件",
-        uri: "http://baidu.com",
-      },
-      {
-        name: "API",
-        uri: "http://baidu.com",
-      },
-      {
-        name: "配置",
-        uri: "http://baidu.com",
-      },
-    ],
+    name: "支持",
   },
   {
-    name: "开发",
+    name: "下载",
     children: [
       {
-        name: "插件",
-        uri: "http://baidu.com",
+        name: "Windows",
+        uri: "http://monibuca.com/windows.tgz",
       },
       {
-        name: "API",
-        uri: "http://baidu.com",
+        name: "Mac",
+        uri: "http://monibuca.com/mac.tgz",
       },
       {
-        name: "配置",
-        uri: "http://baidu.com",
-      },
-    ],
-  },
-  {
-    name: "开发",
-    children: [
-      {
-        name: "插件",
-        uri: "http://baidu.com",
-      },
-      {
-        name: "API",
-        uri: "http://baidu.com",
-      },
-      {
-        name: "配置",
-        uri: "http://baidu.com",
-      },
-    ],
-  },
-  {
-    name: "开发",
-    children: [
-      {
-        name: "插件",
-        uri: "http://baidu.com",
-      },
-      {
-        name: "API",
-        uri: "http://baidu.com",
-      },
-      {
-        name: "配置",
-        uri: "http://baidu.com",
-      },
-    ],
-  },
-  {
-    name: "开发",
-    children: [
-      {
-        name: "插件",
-        uri: "http://baidu.com",
-      },
-      {
-        name: "API",
-        uri: "http://baidu.com",
-      },
-      {
-        name: "配置",
-        uri: "http://baidu.com",
+        name: "Linux",
+        uri: "http://monibuca.com/linux.tgz",
       },
     ],
   },
