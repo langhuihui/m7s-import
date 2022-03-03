@@ -1,37 +1,10 @@
 <script lang="ts" setup>
-import {
-  ElIcon,
-  ElButton,
-  ElPopover,
-  ElCard,
-} from "element-plus/dist/index.full.js";
 import { Service } from "@element-plus/icons-vue";
-
-import { ref } from 'vue'
-import data from '../data/mock'
-// const config = ref(data)
 </script>
 <template>
   <!-- 工具栏 -->
   <div class="tools">
     <el-card>
-      <!-- 报错，坑是真的多 -->
-      <!-- <el-popover placement="left" popper-class="sysContact" title="请选择您需要咨询的系统" :width="800" trigger="click">
-        <div class="config">
-          <ul v-for="item in config" :key="item.name" class="title">
-            <h4 class="sysTitle">{{item.name}}</h4>
-            <li v-for="it in item.children" :key="it.name">
-              <el-button round size="small">{{it.name}}</el-button>
-            </li>
-          </ul>
-        </div>
-        <el-button round size="small" class="other">其他</el-button>
-        <template #reference>
-          <div class="service">
-            <el-icon class="el-icon-service"><Service /></el-icon>
-          </div>
-        </template>
-      </el-popover>-->
       <div class="service">
         <el-icon class="el-icon-service">
           <Service />

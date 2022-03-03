@@ -5,6 +5,7 @@
       background-repeat: no-repeat;
       background-position: right;
     }
+
     &:nth-child(odd) {
       background-color: #fff;
     }
@@ -51,11 +52,13 @@
           font-size: 37px;
           color: #303133;
         }
+
         .slogen {
           font-size: 20px;
           color: #8c8c8c;
           margin: 22px 0;
         }
+
         .info {
           height: 72px;
           font-size: 16px;
@@ -93,6 +96,32 @@
             }
           }
         }
+      }
+    }
+
+    .more {
+      width: 100%;
+      padding: 0 20px;
+
+      ::v-deep .el-card {
+        height: 200px;
+        border: none;
+        &__header {
+          border: none;
+        }
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .card-item {
+        min-height: 50px;
+        color: #8c8c8c;
       }
     }
   }

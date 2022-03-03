@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import {
-  ElIcon,
-} from "element-plus/dist/index.full.js";
 import { ArrowDown } from "@element-plus/icons-vue";
 
 import { ref } from 'vue';
@@ -144,9 +141,8 @@ function goHome() {
             .nav-sheet-items {
               border-radius: 4px;
               position: absolute;
-              background-color: #fff222;
+              background-color: #f2f4ff;
               z-index: 1;
-              // margin-top: 7px;
               overflow: hidden;
               width: max-content;
               .nav-sheet-item {
@@ -156,12 +152,13 @@ function goHome() {
                 font-weight: normal;
                 font-stretch: normal;
                 letter-spacing: 0px;
-                color: #606266;
+                color: #000;
                 width: 100%;
                 text-align: center;
                 &:hover,
                 :active {
-                  background-color: #f2f4ff;
+                  color: #fff;
+                  background-color: #415fff;
                 }
               }
             }
@@ -169,7 +166,6 @@ function goHome() {
         }
       }
       .help {
-        // width: 200px;
         height: 50px;
         line-height: 50px;
         float: right;
