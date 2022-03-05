@@ -1,41 +1,28 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-const monibucaShow = ref(false)
+import hljs from 'highlight.js/lib/core';
+import go from 'highlight.js/lib/languages/go';
+import 'highlight.js/styles/github.css';
+hljs.registerLanguage('go', go);
+onMounted(() => {
+  hljs.highlightAll();
+});
 </script>
 
 <template>
   <div class="project">
     <div class="section">
       <div class="container">
-        <img class="img" src="~@/assets/monibuca.png" alt />
+        <img class="img" src="~@/assets/logo.png" alt />
         <div class="intro">
           <div class="title">Monibuca V4</div>
           <div class="info">Go语言开源插件式流媒体服务器开发框架</div>
           <div class="slogen">简洁、精致、易用</div>
-          <div class="more" @click="monibucaShow = true">
-            <!-- <a class="button" rel="noopener noreferrer">即将发布</a> -->
-            <a class="button" rel="noopener noreferrer">更多细节</a>
+          <div class="more">
+            <a class="button" rel="noopener noreferrer">即将发布</a>
           </div>
-          <!-- <el-collapse accordion v-model="activeName">
-            <el-collapse-item name="1">
-              <template #title>
-                <div class="more">
-                  <a class="button" rel="noopener noreferrer">即将发布</a>
-                </div>
-              </template>
-              <div>
-                Consistent with real life: in line with the process and logic of real
-                life, and comply with languages and habits that the users are used to;
-              </div>
-              <div>
-                Consistent within interface: all elements should be consistent, such
-                as: design style, icons and texts, position of elements, etc.
-              </div>
-            </el-collapse-item>
-          </el-collapse> -->
         </div>
       </div>
-      <div v-show="monibucaShow" class="more">
+      <div class="more">
         <el-row :gutter="16">
           <el-col :span="8">
             <el-card shadow="hover" class="card">
@@ -43,17 +30,27 @@ const monibucaShow = ref(false)
                 <div class="card-header">
                   <span>简洁</span>
                 </div>
+                <div class="card-header">
+                  <pre>
+                    <code class="language-go">
+package main
+
+import (
+ "context"
+
+ "m7s.live/engine/v4"
+)
+
+func main() {
+ ctx := context.Background()
+ engine.Run(ctx, "config.yaml")
+}
+                    </code>
+                  </pre>
+                </div>
               </template>
               <div class="card-item">
-                简洁主题的内容
-                简洁主题的内容
-                简洁主题的内容
-                简洁主题的内容
-                简洁主题的内容
-                简洁主题的内容
-                简洁主题的内容
-                简洁主题的内容
-                简洁主题的内容
+                代码设计追求极致精简、优雅。
               </div>
             </el-card>
           </el-col>
@@ -63,10 +60,11 @@ const monibucaShow = ref(false)
                 <div class="card-header">
                   <span>精致</span>
                 </div>
+                <div class="card-header">
+                  <img class="img" src="~@/assets/monibuca.png" alt />
+                </div>
               </template>
-              <div class="card-item">
-                精致主题的内容
-              </div>
+              <div class="card-item">设计精巧的插件机制，实现高内聚低耦合，具有高超的扩展能力</div>
             </el-card>
           </el-col>
           <el-col :span="8">
@@ -77,14 +75,18 @@ const monibucaShow = ref(false)
                 </div>
               </template>
               <div class="card-item">
-                易用主题的内容
+                <ul>
+                  <li>没有复杂的环境配置</li>
+                  <li>不需要安装运行时</li>
+                  <li>直接下载可执行文件</li>
+                </ul>
               </div>
             </el-card>
           </el-col>
         </el-row>
       </div>
     </div>
-    <div class="section">
+    <!-- <div class="section">
       <div class="container reverse">
         <img class="img" src="~@/assets/jessibuca.png" alt />
         <div class="intro intro">
@@ -112,7 +114,7 @@ const monibucaShow = ref(false)
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 

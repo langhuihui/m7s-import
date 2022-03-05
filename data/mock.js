@@ -4,7 +4,21 @@ const data = [
     uri:"https://docs.m7s.live",
   },
   {
-    name: "支持",
+    name: "不卡系列",
+    children: [
+      {
+        name: "Monibuca",
+        uri: "/",
+      },
+      {
+        name: "Jessibuca",
+        uri: "/jessibuca",
+      },
+      {
+        name: "Rebebuca",
+        uri: "/rebebuca",
+      },
+    ],
   },
   {
     name: "下载",

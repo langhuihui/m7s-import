@@ -4,6 +4,7 @@ specifiers:
   '@element-plus/icons-vue': ^1.0.0
   autoprefixer: ^10.4.2
   element-plus: ^2.0.3
+  highlight.js: ^11.4.0
   less: ^4.1.2
   nuxt3: ^3.0.0-27428764.271289c
   postcss: ^8.4.7
@@ -11,6 +12,9 @@ specifiers:
   tailwindcss: ^3.0.23
   unplugin-icons: ^0.13.2
   unplugin-vue-components: ^0.17.18
+
+dependencies:
+  highlight.js: 11.4.0
 
 devDependencies:
   '@element-plus/icons-vue': 1.0.0
@@ -2641,6 +2645,11 @@ packages:
     hasBin: true
     dev: true
 
+  /highlight.js/11.4.0:
+    resolution: {integrity: sha512-nawlpCBCSASs7EdvZOYOYVkJpGmAOKMYZgZtUqSRqodZE0GRVcFKwo1RcpeOemqh9hyttTdd5wDBwHkuSyUfnA==}
+    engines: {node: '>=12.0.0'}
+    dev: false
+
   /hookable/5.1.1:
     resolution: {integrity: sha512-7qam9XBFb+DijNBthaL1k/7lHU2TEMZkWSyuqmU3sCQze1wFm5w9AlEx30PD7a+QVAjOy6Ec2goFwe1YVyk2uA==}
     dev: true
@@ -3492,8 +3501,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
-  /nitropack-edge/0.0.0-27409638.e9a44f5:
-    resolution: {integrity: sha512-ybZvflpk2Xqb3GihmxIkgk9wV13GP+QeizU2uIHyWj9ZVbzkB0f1C8r8z/EwVcgtuVYWE+3K87EciemnnQLsPA==}
+  /nitropack-edge/0.0.0-27437399.0b55f3c:
+    resolution: {integrity: sha512-sG00vhj3A89MgBy188CUWEEMZu+ibwD2TENxlNKoxMRhUlHEWcLi2Iny4jmt5KykL4t2ZziNja+lc1UxixAlvw==}
     engines: {node: ^14.16.0 || ^16.11.0 || ^17.0.0}
     hasBin: true
     dependencies:
@@ -3743,7 +3752,7 @@ packages:
       magic-string-extra: 0.1.2
       mlly: 0.4.3
       murmurhash-es: 0.1.1
-      nitropack: /nitropack-edge/0.0.0-27409638.e9a44f5
+      nitropack: /nitropack-edge/0.0.0-27437399.0b55f3c
       nuxi: /nuxi-edge/3.0.0-27436017.7b6252a
       ohmyfetch: 0.4.15
       pathe: 0.2.0
