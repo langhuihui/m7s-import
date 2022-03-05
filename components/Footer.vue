@@ -1,20 +1,32 @@
 <script setup>
-import data from '../data/mock'
-const config = ref(data)
+import data from '../data/mock';
+const config = ref(data);
 </script>
 <template>
   <div class="pre-footer">
     <div class="footer-container">
       <div class="container">
         <div class="img">
-          <img src="~@/assets/logo.png" alt="">
+          <img src="~@/assets/qr.jpg" alt />
         </div>
         <div class="navigation">
-          <ul class="direction" v-for="(item,index) in config" :key="index">
-            <li class="title"><span>{{item.name}}</span></li>
-            <li class="product" v-for="(j,i) in item.children" :key="i"><span><a :href="j.uri" target="_blank"
-                  rel="noopener noreferrer">{{j.name}}</a></span></li>
+          <ul class="direction" v-for="(item, index) in config" :key="index">
+            <li class="title">
+              <span v-if="item.uri">
+                <a :href="item.uri" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
+              </span>
+              <span v-else>{{ item.name }}</span>
+            </li>
+            <li class="product" v-for="(j, i) in item.children" :key="i">
+              <span>
+                <a :href="j.uri" target="_blank" rel="noopener noreferrer">{{ j.name }}</a>
+              </span>
+            </li>
           </ul>
+        </div>
+        <div class="img2">
+          <img src="~@/assets/alipay.jpg" alt />
+          <img src="~@/assets/wechat.jpg" alt />
         </div>
       </div>
     </div>
@@ -34,6 +46,7 @@ const config = ref(data)
     justify-content: space-between;
     .container {
       padding-top: 82px;
+      position: relative;
       .img {
         vertical-align: top;
         display: inline-block;
@@ -41,6 +54,15 @@ const config = ref(data)
         height: 59px;
         > img {
           width: 100%;
+        }
+      }
+      .img2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        > img {
+          width: 150px;
+          margin: 20px;
         }
       }
       .navigation {
