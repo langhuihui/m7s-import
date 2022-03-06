@@ -47,7 +47,7 @@ const config = ref(data);
     justify-content: center;
     flex: 1;
     img {
-      width: 60%;
+      height: 225px;
     }
   }
   .right {
