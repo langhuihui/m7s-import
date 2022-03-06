@@ -4,8 +4,10 @@ import go from 'highlight.js/lib/languages/go';
 import 'highlight.js/styles/github.css';
 import Roles from '../../components/Roles.vue';
 hljs.registerLanguage('go', go);
+const showCode = ref(false)
 onMounted(() => {
   hljs.highlightAll();
+  showCode.value = true
 });
 </script>
 
@@ -27,12 +29,12 @@ onMounted(() => {
       <div class="more">
         <el-row :gutter="16">
           <el-col :span="8">
-            <el-card shadow="hover" class="card">
+            <el-card shadow="hover" class="card"  v-show="showCode">
               <template #header>
                 <div class="card-header">
                   <span>简洁</span>
                 </div>
-                <div class="card-header">
+                <div class="card-header go">
                   <pre>
                     <code class="language-go">
 package main
@@ -82,6 +84,17 @@ func main() {
                   <li>不需要安装运行时</li>
                   <li>直接下载可执行文件</li>
                 </ul>
+                <div class="download">
+                  <div class="download-item windows">
+                    <i class="iconfont icon-windows"></i>
+                  </div>
+                  <div class="download-item apple">
+                    <i class="iconfont icon-apple"></i>
+                  </div>
+                  <div class="download-item linux">
+                    <i class="iconfont icon-linux"></i>
+                  </div>
+                </div>
               </div>
             </el-card>
           </el-col>

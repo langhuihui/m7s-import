@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import './assets/css/tailwind.less'
+import './assets/icon/iconfont.css'
 import 'element-plus/dist/index.css';
 </script>
 

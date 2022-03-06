@@ -1,5 +1,6 @@
 .project {
-  color: #1C295D;
+  color: #1c295d;
+
   .section {
     &:nth-child(1) {
       background-size: contain;
@@ -44,7 +45,6 @@
       .intro {
         width: 315px;
         margin-left: 211px;
-        font-family: HYQiHei-FZS;
         font-weight: normal;
         font-stretch: normal;
         letter-spacing: 0px;
@@ -105,16 +105,18 @@
       padding: 0 20px;
 
       ::v-deep .el-card {
-       
         border: none;
+
         &__header {
           border: none;
         }
       }
+
       img {
         margin: 30px 0;
         height: 256px;
       }
+
       .card-header {
         display: flex;
         align-items: center;
@@ -125,7 +127,57 @@
       .card-item {
         min-height: 50px;
         color: #8c8c8c;
+
+        .download {
+          display: flex;
+          height: 200px;
+          justify-content: space-between;
+          align-items: center;
+          color: #fff;
+
+          .download-item {
+            padding: 20px 55px;
+            border-radius: 2px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+
+            .iconfont {
+              font-size: 60px;
+            }
+          }
+
+          .windows {
+            background-color: #0066aa;
+
+            &:hover {
+              background-color: #f2f2f2;
+              color: #0066aa;
+            }
+          }
+
+          .apple {
+            background-color: #a9a9a9;
+
+            &:hover {
+              background-color: #f2f2f2;
+              color: #a9a9a9;
+            }
+          }
+
+          .linux {
+            background-color: #ee4433;
+
+            &:hover {
+              background-color: #f2f2f2;
+              color: #ee4433;
+            }
+          }
+        }
       }
+
       .language-go {
         font-size: 16px;
         border: 2px solid lightblue;
