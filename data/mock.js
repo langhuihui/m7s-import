@@ -1,7 +1,16 @@
 const data = [
   {
-    name: "文档",
-    uri:"https://docs.m7s.live",
+    name: "开发",
+    children: [
+      {
+        name: "文档",
+        uri: "https://docs.m7s.live",
+      },
+      {
+        name: "视频教程",
+        uri: "/video",
+      }
+    ]
   },
   {
     name: "不卡系列",
@@ -39,4 +48,4 @@ const data = [
   },
 ];
 
-export default data
+export default data;

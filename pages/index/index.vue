@@ -2,6 +2,7 @@
 import hljs from 'highlight.js/lib/core';
 import go from 'highlight.js/lib/languages/go';
 import 'highlight.js/styles/github.css';
+import Roles from '../../components/Roles.vue';
 hljs.registerLanguage('go', go);
 onMounted(() => {
   hljs.highlightAll();
@@ -12,7 +13,8 @@ onMounted(() => {
   <div class="project">
     <div class="section">
       <div class="container">
-        <img class="img" src="~@/assets/logo.png" alt />
+        <!-- <img class="img" src="~@/assets/logo.png" alt /> -->
+        <Roles style="height: 300px;"/>
         <div class="intro">
           <div class="title">Monibuca V4</div>
           <div class="info">Go语言开源插件式流媒体服务器开发框架</div>

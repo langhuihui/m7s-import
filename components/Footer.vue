@@ -7,7 +7,7 @@ const config = ref(data);
     <div class="footer-container">
       <div class="container">
         <div class="img">
-          <img src="~@/assets/qr.jpg" alt />
+          <img src="~@/assets/qcode.jpg" alt />
         </div>
         <div class="navigation">
           <ul class="direction" v-for="(item, index) in config" :key="index">
