@@ -31,7 +31,7 @@ const config = ref(data);
 <style lang="less" scoped>
 .footer {
   width: 100%;
-  background-image: linear-gradient(150deg, #242247 0%, #141233 100%);
+  background-image: linear-gradient(150deg, #5824E8 0%, #E86024 100%);
   min-height: 298px;
   padding: 40px 0;
   font-size: 16px;

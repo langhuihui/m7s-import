@@ -38,7 +38,7 @@ function goHome() {
       <div class="top">
         <div class="logo" @click="goHome">
           <img src="~@/assets/logo.png" alt />
-          <div style="position:absolute; top: 12px;left: 40px;font-size: 22px;">Monibuca</div>
+          <div style="position:absolute; top: 12px;left: 60px;font-size: 22px;">Monibuca</div>
         </div>
         <div class="nav-contain">
           <ul class="nav">
@@ -101,7 +101,6 @@ function goHome() {
         z-index: 99;
         img {
           margin-top: 12px;
-          width: 32px;
           height: 26px;
         }
       }

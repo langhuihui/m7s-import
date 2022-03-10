@@ -32,24 +32,13 @@
       </line>
     </g>
     <rect class="cls-1" x="60" y="50" width="86" height="38.13" rx="8" />
-    <text class="cls-2" transform="translate(85 74)">Tracks</text>
+    <text class="cls-2" transform="translate(85 74)">Stream</text>
     <rect class="cls-4" x="60" y="9" width="86" height="32.07" />
     <rect class="cls-5" x="60" y="96" width="86" height="32.07" />
 
     <text class="cls-2" transform="translate(79 30)">Publisher</text>
     <text class="cls-2" transform="translate(78 116)">Subsciber</text>
-    <polyline class="cls-11" points="155 131 155 136 150 136" />
-    <line class="cls-12" x1="144" y1="136" x2="111" y2="136" />
-    <line class="cls-13" x1="108" y1="136" x2="57" y2="136" />
-    <polyline class="cls-11" points="55 136 50 136 50 131" />
-    <line class="cls-14" x1="50" y1="126" x2="50" y2="98" />
-    <line class="cls-15" x1="50" y1="96" x2="50" y2="8" />
-    <polyline class="cls-11" points="50 6 50 1 55 1" />
-    <line class="cls-12" x1="60" y1="1" x2="93" y2="1" />
-    <line class="cls-13" x1="96" y1="1" x2="147" y2="1" />
-    <polyline class="cls-11" points="150 1 155 1 155 6" />
-    <line class="cls-14" x1="155" y1="11" x2="155" y2="38" />
-    <line class="cls-15" x1="155" y1="41" x2="155" y2="128" />
+    <rect class="cls-3" x="50" y="1" width="106" height="135"></rect>
     <rect class="cls-16" x="172" y="9" width="32" height="47.18" />
     <rect class="cls-16" x="172" y="80" width="32" height="47.18" />
     <text class="cls-17" transform="matrix(0.47, 0.88, -0.88, 0.47, 174.38, 12.72)">remote server</text>
@@ -78,7 +67,7 @@ circle {
   stroke-dasharray: 2, 2, 2;
 }
 .cls-1 {
-  fill: #fbd87a
+  fill: #E86024
 }
 .cls-1,
 .cls-16,
@@ -89,19 +78,12 @@ circle {
 }
 .cls-2 {
   font-size: 12px;
+  fill: white;
 }
-.cls-17,
-.cls-2 {
+.cls-4,.cls-5{
+  fill: #5824E8;
 }
-.cls-3 {
-  letter-spacing: -0.01em;
-}
-.cls-4 {
-  fill: #abdcfc;
-}
-.cls-5 {
-  fill: #abdcfc;
-}
+.cls-3,
 .cls-11,
 .cls-12,
 .cls-13,
@@ -129,70 +111,20 @@ circle {
 .cls-8 {
   stroke-width: 1px;
 }
-.cls-7 {
-  stroke-dasharray: 6.28 6.28;
-}
+
 .cls-26,
 .cls-8 {
   stroke: #fbb03b;
 }
-.cls-9 {
-  letter-spacing: -0.01em;
-}
-.cls-10 {
-  letter-spacing: 0em;
-}
-.cls-11,
-.cls-12,
-.cls-13,
-.cls-14,
-.cls-15 {
+.cls-3 {
+  stroke-dasharray: 5, 5, 5;
   stroke: #b3b3b3;
 }
-.cls-12 {
-  stroke-dasharray: 11.9 5.95 11.9 5.95;
-}
-.cls-13 {
-  stroke-dasharray: 11.9 5.95 11.9 5.95 11.9 5.95;
-}
-.cls-14 {
-  stroke-dasharray: 10.01 5.01 10.01 5.01;
-}
-.cls-15 {
-  stroke-dasharray: 10.01 5.01 10.01 5.01 10.01 5.01;
-}
-.cls-16 {
-  fill: #264393;
+.cls-16,.cls-22 {
+  fill: #E8B424;
 }
 .cls-17 {
   font-size: 8px;
   fill: #fff;
-}
-.cls-18 {
-  letter-spacing: -0.01em;
-}
-.cls-19 {
-  letter-spacing: -0.01em;
-}
-.cls-20 {
-  letter-spacing: 0.02em;
-}
-.cls-21 {
-  letter-spacing: -0.01em;
-}
-.cls-22 {
-  fill: #264393;
-}
-.cls-23 {
-  letter-spacing: 0em;
-}
-.cls-24 {
-  stroke-dasharray: 9.99 9.99;
-}
-.cls-25 {
-  stroke-dasharray: 10.89 10.89;
-}
-.cls-26 {
-  stroke-dasharray: 10.55 10.55;
 }
 </style>

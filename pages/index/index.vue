@@ -18,7 +18,7 @@ onMounted(() => {
         <!-- <img class="img" src="~@/assets/logo.png" alt /> -->
         <Roles style="height: 300px;" />
         <div class="intro">
-          <div class="title">Monibuca V4</div>
+          <div class="title"><img src="~@/assets/logo.png"/> V4</div>
           <div class="info">Go语言开源插件式流媒体服务器开发框架</div>
           <div class="slogen">简洁、精致、易用</div>
           <div class="more">
