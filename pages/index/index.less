@@ -1,109 +1,41 @@
 .project {
   color: #1c295d;
+  padding: 0 150px;
+  margin-top: 60px;
 
   .section {
-    &:nth-child(1) {
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: right;
-    }
-
-    &:nth-child(odd) {
-      background-color: #fff;
-    }
-
-    &:nth-child(even) {
-      background-color: #f3f6fc;
-    }
-
     .container {
-      &.reverse {
-        flex-direction: row-reverse;
-
-        .img {
-          margin-right: 44px;
-          margin-left: 199px;
-        }
-
-        .intro {
-          margin-left: 0;
-        }
-      }
-
-      width: 1190px;
       margin: 0 auto;
-      height: 460px;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
 
       .img {
-        margin-left: 44px;
-        height: 300px;
+        margin-left: 35px;
+        width: 612px;
+        height: 269px;
       }
 
       .intro {
-        width: 315px;
-        margin-left: 211px;
-        font-weight: normal;
-        font-stretch: normal;
-        letter-spacing: 0px;
-
-        .title {
-          font-size: 37px;
-          color: #303133;
-        }
-
-        .slogen {
-          font-size: 20px;
-          color: #8c8c8c;
-          margin: 22px 0;
-        }
-
-        .info {
-          height: 72px;
+        .h2 {
           font-size: 16px;
-          color: #727485;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          line-height: 18px;
-          margin: 22px 0;
+          font-weight: 400;
+          color: #E89424;
         }
 
-        .more {
-          position: relative;
-
-          .button {
-            display: inline-block;
-            cursor: pointer;
-            width: 96px;
-            height: 32px;
-            line-height: 32px;
-            background-color: #E86024;
-            border-radius: 16px;
-            font-family: MicrosoftYaHei;
-            font-size: 14px;
-            text-align: center;
-            color: #fff;
-            z-index: 4545;
-            box-shadow: 0 5px 4px -1px rgba(69, 111, 255, 0.44);
-
-            &:hover {
-              background-color: #E8B424;
-            }
-
-            &:active {
-              background-color: #E86024;
-            }
-          }
+        .h3 {
+          font-size: 15px;
+          font-weight: 400;
+          color: #707070;
         }
       }
     }
 
     .more {
+      margin-top: 100px;
       width: 100%;
-      padding: 0 20px;
 
+      // padding: 0 20px;
       ::v-deep .el-card {
         border: none;
 
@@ -117,39 +49,66 @@
         height: 256px;
       }
 
+      .mh {
+        // min-height: 400px;
+      }
+
+      .card {
+        position: relative;
+        min-height: 440px;
+      }
+
       .card-header {
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 24px;
+        color: #707070;
+
         .card-item {
           font-size: 14px;
           margin-top: 20px;
+          width: 320px;
         }
       }
+
+      .bottom {
+        position: absolute;
+        bottom: 0;
+
+        .title {
+          text-align: center;
+          font-size: 26px;
+          font-weight: bold;
+          color: #707070;
+        }
+      }
+
       .card-header.go {
-        margin: 0px 20px 0 20px;
         border-radius: 2%;
         position: relative;
-        font-size: 16px;
+        font-size: 12px;
         box-shadow: 0 5px 10px -5px black;
+
         pre {
           height: 300px;
           overflow: hidden;
         }
-        .language-go{
+
+        .language-go {
           padding: 0;
         }
+
         svg {
           position: absolute;
           top: 10px;
           left: 10px;
         }
       }
+
       .card-item {
         min-height: 50px;
-        color: #8c8c8c;
-
+        color: #707070;
         .download {
           display: flex;
           height: 200px;
@@ -199,8 +158,6 @@
           }
         }
       }
-
-     
     }
   }
 }

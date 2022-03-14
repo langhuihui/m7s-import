@@ -1,4 +1,4 @@
-import type { IncomingMessage, ServerResponse } from 'http';
+import type { IncomingMessage, ServerResponse } from 'http'
 const engineHTML = `
 <!DOCTYPE html>
 <html>
@@ -15,14 +15,14 @@ const engineHTML = `
 </body>
 
 </html>
-`;
+`
 export default async (req: IncomingMessage, res: ServerResponse) => {
-  const url = new URL(req.url, `http://${req.headers.host}`);
-  const parts = url.pathname.split('/');
+  const url = new URL(req.url, `http://${req.headers.host}`)
+  const parts = url.pathname.split('/')
   switch (parts[1]) {
     case 'engine':
-      res.end(engineHTML);
-      break;
+      res.end(engineHTML)
+      break
     case 'plugin':
       res.end(`<!DOCTYPE html>
 <html>
@@ -39,6 +39,6 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
 </body>
 
 </html>     
-      `);
+      `)
   }
-};
+}

@@ -1,0 +1,51 @@
+.box {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+.logo {
+  align-items: center;
+}
+
+.nav {
+  .nav-sheet-container {
+    display: none;
+  }
+
+  .item {
+    &:hover {
+      cursor: pointer;
+      color: #415fff;
+
+      >.el-icon-arrow-down {
+        transform: rotate(-180deg);
+        transform-origin: center;
+        transition: all 0.2s ease 0s;
+      }
+    }
+
+    >.el-icon-arrow-down {
+      margin-left: 5px;
+    }
+
+    .nav-sheet-items {
+      position: absolute;
+      z-index: 1;
+
+      .nav-sheet-item {
+        text-align: center;
+        color: #000;
+        &:hover,
+        :active {
+          color: #fff;
+          background-color: #415fff;
+        }
+      }
+    }
+  }
+}

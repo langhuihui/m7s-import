@@ -1,0 +1,61 @@
+  .footer {
+    background: #ffe9e0;
+    line-height: 32px;
+    color: #707070;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    display: flex;
+
+    .left {
+      display: flex;
+      justify-content: space-between;
+      line-height: 1;
+
+      .direction {
+        text-align: center;
+
+        .title {
+          font-size: 18px;
+          padding-bottom: 22px;
+          color: #222;
+          font-size: 18px;
+        }
+
+        .product {
+          cursor: pointer;
+          font-size: 16px;
+          padding-bottom: 22px;
+          &:hover,
+          :active {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .right {
+      font-weight: bold;
+
+      .icon-list {
+        position: relative;
+
+        .hover {
+          position: absolute;
+          bottom: 50px;
+        }
+
+        .icon {
+          display: inline-block;
+          width: 36px;
+          height: 36px;
+          margin-right: 12px;
+
+          img {
+            width: 36px;
+            height: 36px;
+          }
+        }
+      }
+    }
+  }
