@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     script: [
       {
         type: 'text/javascript',
-        src: 'http://http://m7s.live/js/flexible.js',
+        src: 'http://m7s.live/js/flexible.js',
       },
       {
         type: 'text/javascript',
