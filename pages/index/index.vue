@@ -69,14 +69,13 @@ func main() {
                 <a
                   class="iconfont icon-windows"
                   href="http://monibuca.com/windows.tgz"
-                  target="_blank"
                 ></a>
               </div>
               <div class="download-item apple">
-                <a class="iconfont icon-apple" href="http://monibuca.com/mac.tgz" target="_blank"></a>
+                <a class="iconfont icon-apple" href="http://monibuca.com/mac.tgz"></a>
               </div>
               <div class="download-item linux">
-                <a class="iconfont icon-linux" href="http://monibuca.com/linux.tgz" target="_blank"></a>
+                <a class="iconfont icon-linux" href="http://monibuca.com/linux.tgz"></a>
               </div>
             </div>
             <div class="download-desc">windows直接双击exe运行，mac需要设置一下文件的可执行权限</div>
