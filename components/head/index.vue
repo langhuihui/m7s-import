@@ -34,7 +34,7 @@
   <div class="main">
     <div class="left">
       <img src="~@/assets/img/logo.png"/>
-      <div class="title">Monibuca</div>
+      <div class="title">Monibuca1</div>
     </div>
     <div class="right">
       <div class="item" @click="goHome">首页</div>
