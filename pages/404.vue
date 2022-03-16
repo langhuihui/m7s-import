@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+</script>
+
 <template>
   <div class="error">
     <h1>404</h1>

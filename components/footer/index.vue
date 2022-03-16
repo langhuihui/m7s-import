@@ -6,25 +6,25 @@ const showWx = ref(false)
 const showZf = ref(false)
 </script>
 <template>
-  <div class="footer min-h-[300px] py-[40px] text-[16px]">
+  <div class="footer">
     <div class="left">
-      <ul class="direction w-50" v-for="(item, index) in config" :key="index">
-        <li class="title">
+      <div class="item" v-for="(item, index) in config" :key="index">
+        <div class="title">
           <span v-if="item.url">
             <a :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
           </span>
           <span v-else>{{ item.name }}</span>
-        </li>
-        <li class="product" v-for="(j, i) in item.children" :key="i">
+        </div>
+        <div class="product" v-for="(j, i) in item.children" :key="i">
           <span>
-            <a :href="j.url" target="_blank" rel="noopener noreferrer">{{ j.name }}</a>
+            <div :href="j.url" target="_blank" rel="noopener noreferrer">{{ j.name }}</div>
           </span>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
-    <div class="right mr-[100px]">
-      <div>关于我们</div>
-      <div class="icon-list mt-2">
+    <div class="right">
+      <div class="us">关于我们</div>
+      <div class="icon-list">
         <div class="hover" v-if="showLx">
           <img src="~@/assets/img/footer/wx-qun.jpg" alt />
         </div>
@@ -48,6 +48,9 @@ const showZf = ref(false)
         </div>
       </div>
     </div>
+     <div
+        class="rights"
+      >© 2020 - Present Monibuca. All rights reserved.</div>
   </div>
 </template>
 <style lang="less" scoped src="./index.less"></style>

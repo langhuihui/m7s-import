@@ -1,61 +1,90 @@
-  .footer {
-    background: #ffe9e0;
-    line-height: 32px;
-    color: #707070;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+.footer {
+  background: #ffe9e0;
+  line-height: 32px;
+  color: #707070;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  display: flex;
+  padding: 18px 144px;
+  min-height: 200px;
+  // background: #111827;
+  position: relative;
+
+  .left {
     display: flex;
+    justify-content: space-between;
+    line-height: 1;
 
-    .left {
-      display: flex;
-      justify-content: space-between;
-      line-height: 1;
-
-      .direction {
-        text-align: center;
-
-        .title {
-          font-size: 18px;
-          padding-bottom: 22px;
-          color: #222;
-          font-size: 18px;
-        }
-
-        .product {
-          cursor: pointer;
-          font-size: 16px;
-          padding-bottom: 22px;
-          &:hover,
-          :active {
-            color: #fff;
-          }
-        }
-      }
+    .item {
+      padding-right: 200px;
     }
 
-    .right {
+    .title {
+      font-size: 18px;
+      color: #222;
+      font-size: 18px;
+      padding-bottom: 10px;
+      height: 25px;
+    }
+
+    .product {
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+      color: #666;
+      height: 20px;
+
+      &:hover,
+      :active {
+        color: #fff;
+      }
+    }
+  }
+
+  .right {
+    font-weight: bold;
+    line-height: 1;
+
+    .us {
+      font-size: 18px;
       font-weight: bold;
+      color: #707070;
+      height: 25px;
+    }
 
-      .icon-list {
-        position: relative;
+    .icon-list {
+      margin-top: 10px;
+      position: relative;
 
-        .hover {
-          position: absolute;
-          bottom: 50px;
+      .hover {
+        position: absolute;
+        bottom: 50px;
+
+        img {
+          height: 195px;
         }
+      }
 
-        .icon {
-          display: inline-block;
+      .icon {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        margin-right: 12px;
+
+        img {
           width: 36px;
           height: 36px;
-          margin-right: 12px;
-
-          img {
-            width: 36px;
-            height: 36px;
-          }
         }
       }
     }
   }
+
+  .rights {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #9ca3af;
+  }
+}

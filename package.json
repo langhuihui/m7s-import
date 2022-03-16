@@ -4,8 +4,7 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "tw": "nuxi dev -o & tailwind-config-viewer -o -p 4000",
-    "start": "node .output/server/index.mjs",
-    "format": "prettier --write \"./**/*.ts\" \"./**/*.vue\""
+    "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
     "@element-plus/icons-vue": "^1.0.0",
@@ -15,7 +14,9 @@
     "nuxt-windicss": "^2.2.8",
     "nuxt3": "^3.0.0-27428764.271289c",
     "postcss": "^8.4.7",
-    "prettier": "^2.5.1",
+    "postcss-pxtorem": "^6.0.0",
+    "px2rem-loader": "^0.1.9",
+    "tailwind-config-viewer": "^1.6.3",
     "unplugin-icons": "^0.13.2",
     "unplugin-vue-components": "^0.17.18"
   },

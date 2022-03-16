@@ -31,17 +31,17 @@
 
 <template>
   <!--顶部导航 -->
-  <div class="px-[150px] h-[50px] flex space-between box">
-    <div class="flex logo">
-      <img class="h-[28px] flex-row" src="~@/assets/img/logo.png"/>
-      <div class="leading-[50px] text-slate-500 text-2xl ml-1">Monibuca</div>
+  <div class="main">
+    <div class="left">
+      <img src="~@/assets/img/logo.png"/>
+      <div class="title">Monibuca</div>
     </div>
-    <div class="flex nav">
-      <div class="mx-[13px] leading-[50px] text-slate-500" @click="goHome">首页</div>
+    <div class="right">
+      <div class="item" @click="goHome">首页</div>
       <div
         v-for="(item, index) in config"
         :key="index"
-        class="item px-[14px] leading-[50px] text-slate-500"
+        class="item"
         @mouseenter="showNav($event, true)"
         @mouseleave="showNav($event, false)">
         <template v-if="item.children">
@@ -53,14 +53,13 @@
             class="nav-sheet-container"
             @mouseenter="keepShowNav($event, true)"
             @mouseleave="keepShowNav($event, false)">
-            <div class="nav-sheet-items rounded">
-              <div v-for="(j, i) in item.children" :key="i" class="nav-sheet-item text-size-[14px] px-[20px] py-[6px] leading-[20px]">
-                <a :href="j.url" target="_blank" rel="noopener noreferrer">{{ j.name }}</a>
+            <div class="nav-sheet-items">
+              <div v-for="(j, i) in item.children" :key="i" class="nav-sheet-item">
+                {{ j.name }}
               </div>
             </div>
           </div>
         </template>
-        <a v-else :href="item.url" target="_blank">{{ item.name }}</a>
       </div>
     </div>
   </div>
