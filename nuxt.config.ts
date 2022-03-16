@@ -1,9 +1,11 @@
+import { XastChild } from './node_modules/svgo/lib/types';
 import { defineNuxtConfig } from "nuxt3";
 import IconsResolver from "unplugin-icons/resolver";
 import Components from "unplugin-vue-components/vite";
 const lifecycle = process.env.npm_lifecycle_event;
 
 export default defineNuxtConfig({
+  mode: "universal",
   meta: {
     title: "m7s 4.0",
     meta: [
@@ -20,8 +22,7 @@ export default defineNuxtConfig({
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     script: [
       {
-        type: "text/javascript",
-        src: 'assets/js/flexible.js'
+        src: 'http://m7s.live/static/js/flexible.js'
       },
       {
         type: "text/javascript",
@@ -37,6 +38,10 @@ export default defineNuxtConfig({
   },
 
   components: true,
+
+  // modules: [
+  //   '~/assets/js/flexible.js'
+  // ],
 
   // vite plugins
   vite: {
