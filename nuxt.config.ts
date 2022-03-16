@@ -21,8 +21,7 @@ export default defineNuxtConfig({
     script: [
       {
         type: 'text/javascript',
-        src: './public/flexible.js',
-        async: true
+        src: './public/flexible.js'
       },
       {
         type: "text/javascript",
