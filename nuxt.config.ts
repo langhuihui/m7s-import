@@ -20,7 +20,8 @@ export default defineNuxtConfig({
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     script: [
       {
-        src: require('~/assets/js/flexible.js')
+        type: "text/javascript",
+        src: 'assets/js/flexible.js'
       },
       {
         type: "text/javascript",

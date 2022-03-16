@@ -68,7 +68,7 @@ func main() {
               <div class="download-item windows">
                 <a
                   class="iconfont icon-windows"
-                  href="http://monibuca.com/windows.tgz"
+                  href="https://monibuca.com/windows.tgz"
                 ></a>
               </div>
               <div class="download-item apple">
