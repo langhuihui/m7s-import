@@ -17,7 +17,7 @@ const showZf = ref(false)
         </div>
         <div class="product" v-for="(j, i) in item.children" :key="i">
           <span>
-            <div :href="j.url" target="_blank" rel="noopener noreferrer">{{ j.name }}</div>
+            <a :href="j.url" target="_blank" rel="noopener noreferrer">{{ j.name }}</a>
           </span>
         </div>
       </div>
