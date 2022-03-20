@@ -45,10 +45,12 @@
         @mouseenter="showNav($event, true)"
         @mouseleave="showNav($event, false)">
         <template v-if="item.children">
-          {{ item.name }}
-          <el-icon class="el-icon-arrow-down">
+          <span>{{ item.name }}</span>
+          <!-- {{ item.name }} -->
+
+          <!-- <el-icon class="el-icon-arrow-down">
             <ArrowDown />
-          </el-icon>
+          </el-icon> -->
           <div
             class="nav-sheet-container"
             @mouseenter="keepShowNav($event, true)"
