@@ -2,12 +2,16 @@
 import hljs from 'highlight.js/lib/core'
 import go from 'highlight.js/lib/languages/go'
 import 'highlight.js/styles/github.css'
-import Roles from '../../components/Roles.vue';
+import Roles from '../../components/Roles.vue'
+import { UrlEnum } from '@/enums/urlEnum';
 hljs.registerLanguage('go', go)
 const showCode = ref(false)
 onMounted(() => {
   hljs.highlightAll()
   showCode.value = true
+})
+const url = ref({
+  ...UrlEnum
 })
 </script>
 
@@ -70,14 +74,14 @@ func main() {
               <div class="download-item windows">
                 <a
                   class="iconfont icon-windows"
-                  href="https://monibuca.com/windows.tgz"
+                  :href="url.M7S_WIN"
                 ></a>
               </div>
               <div class="download-item apple">
-                <a class="iconfont icon-apple" href="http://monibuca.com/mac.tgz"></a>
+                <a class="iconfont icon-apple" :href="url.M7S_IOS"></a>
               </div>
               <div class="download-item linux">
-                <a class="iconfont icon-linux" href="http://monibuca.com/linux.tgz"></a>
+                <a class="iconfont icon-linux" :href="url.M7S_LINUX"></a>
               </div>
             </div>
             <div class="download-desc">windows直接双击exe运行，mac需要设置一下文件的可执行权限</div>

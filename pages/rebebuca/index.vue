@@ -2,18 +2,21 @@
 </script>
 
 <template>
-  <div class="error">
-    <img src="~@/assets/img/404.png">
+  <div class="jessibuca">
+    <div class="empty">
+      敬请期待...
+    </div>
   </div>
 </template>
 
 <style lang="less" scoped>
-  .error {
+  .jessibuca {
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
-      height: 600px;
-    }
+  }
+  .empty {
+    font-size: 30px;
+    color: #707070;
   }
 </style>

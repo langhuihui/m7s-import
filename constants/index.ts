@@ -8,7 +8,7 @@ const data = [
       },
       {
         name: '视频教程',
-        url: '/video'
+        url: '/study'
       }
     ]
   },

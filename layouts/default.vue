@@ -1,8 +1,12 @@
 <template>
-  <div>
+  <div class="app">
     <Head></Head>
-    <slot />
-    <Footer></Footer>
+    <div class="app-main">
+      <slot />
+    </div>
+    <div class="app-footer">
+      <Footer></Footer>
+    </div>
   </div>
 </template>
   <script>
@@ -13,3 +17,19 @@ _LTracker.push({
   tag: "homepage"
 });
 </script>
+
+<style lang="less" scoped>
+  .app {
+    min-height: 100vh;
+    position: relative;
+    &-main {
+      min-height: calc(100vh - 245px);
+      padding-bottom: 116px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-footer {
+    }
+  }
+</style>
