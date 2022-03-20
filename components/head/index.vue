@@ -33,8 +33,8 @@
   <!--顶部导航 -->
   <div class="main">
     <div class="left">
-      <img src="~@/assets/img/logo.png"/>
-      <div class="title">Monibuca</div>
+      <img src="~@/assets/img/monibuca.png"/>
+      <!-- <div class="title">Monibuca</div> -->
     </div>
     <div class="right">
       <div class="item" @click="goHome">首页</div>

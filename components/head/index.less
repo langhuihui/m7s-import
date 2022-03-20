@@ -2,16 +2,16 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: white;
-  height: 60px;
-  padding: 0 360px;
+  background: #FFE300;
+  height: 50px;
+  padding: 0 260px;
   display: flex;
   justify-content: space-between;
   .left {
     display: flex;
     align-items: center;
     img {
-      height: 40px;
+      height: 45px;
     }
     .title {
       font-size: 26px;
@@ -19,18 +19,19 @@
     }
   }
   .right {
-    color: #707070;
+    color: #000;
     font-size: 18px;
     display: flex;
     justify-content: space-between;
     .item {
+      padding: 0 29px;
       position: relative;
-      margin: 0 20px;
-      height: 60px;
-      line-height: 60px;
+      height: 50px;
+      line-height: 50px;
       &:hover {
         cursor: pointer;
-        color: #415fff;
+        color: #FFE300;
+        background: #282828;
 
         > .el-icon-arrow-down {
           transform: rotate(-180deg);
@@ -45,20 +46,20 @@
       .nav-sheet-container {
         display: none;
         position: absolute;
-        width: 150px;
+        left: 0;
+        width: max-content;
+        width: 100%;
         .nav-sheet-items {
           border-radius: 4px;
-          background: #f2f2f2;
           z-index: 100;
           .nav-sheet-item {
-            line-height: 19px;
-            padding: 10px 20px;
+            line-height: 40px;
+            height: 40px;
             font-size: 14px;
-            color: #222;
+            color: #282828;
             text-align: center;
             &:hover {
-              color: #fff;
-              background-color: #415fff;
+              background: #FFE300;
             }
           }
         }

@@ -16,8 +16,10 @@ onMounted(() => {
     <div class="section">
       <div class="container">
         <div class="intro">
-          <div class="h2">Monibuca引擎+插件=定制化流媒体服务器</div>
-          <div class="h3">GO语言开源插件式流媒体服务器开发框架</div>
+          <div class="h2">
+            <span class="enhance">GO语言</span>开源插件式流媒体服务器开发框架
+          </div>
+          <div class="h3">Monibuca引擎+插件=定制化流媒体服务器</div>
         </div>
         <img class="img" src="~@/assets/img/m7s.png" />
       </div>
