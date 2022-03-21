@@ -1,9 +1,9 @@
 <script setup>
-import data from '../../constants/index'
-const config = ref(data)
-const showLx = ref(false)
-const showWx = ref(false)
-const showZf = ref(false)
+  import data from '../../constants/index'
+  const config = ref(data)
+  const showLx = ref(false)
+  const showWx = ref(false)
+  const showZf = ref(false)
 </script>
 <template>
   <div class="footer">
@@ -48,9 +48,7 @@ const showZf = ref(false)
         </div>
       </div>
     </div>
-     <div
-        class="rights"
-      >© 2020 - Present Monibuca. All rights reserved.</div>
+    <div class="rights">© 2020 - Present Monibuca. All rights reserved.</div>
   </div>
 </template>
 <style lang="less" scoped src="./index.less"></style>

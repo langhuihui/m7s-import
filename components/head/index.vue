@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import data from '../../constants'
-const config = ref(data)
+  import { ref } from 'vue'
+  import data from '../../constants'
+  const config = ref(data)
 </script>
 
 <template>
@@ -24,7 +24,8 @@ const config = ref(data)
               v-for="(j, i) in item.children"
               :key="i"
               class="nav-sheet-item"
-            >{{ j.name }}</a>
+              >{{ j.name }}</a
+            >
           </div>
         </template>
       </div>

@@ -1,11 +1,8 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="jessibuca">
-    <div class="empty">
-      敬请期待...
-    </div>
+    <div class="empty">敬请期待...</div>
   </div>
 </template>
 

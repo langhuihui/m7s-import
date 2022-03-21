@@ -1,8 +1,6 @@
-import { XastChild } from './node_modules/svgo/lib/types';
-import { defineNuxtConfig } from "nuxt3";
-import IconsResolver from "unplugin-icons/resolver";
-import Components from "unplugin-vue-components/vite";
-const lifecycle = process.env.npm_lifecycle_event;
+import { defineNuxtConfig } from 'nuxt3'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineNuxtConfig({
   mode: 'universal',
@@ -12,13 +10,13 @@ export default defineNuxtConfig({
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         name: 'keywords',
-        content: '流媒体,Golang,Flv,HLS,RTMP,GB28181,RTSP,WebRTC,RTP,HDL,H265'
+        content: '流媒体,Golang,Flv,HLS,RTMP,GB28181,RTSP,WebRTC,RTP,HDL,H265',
       },
       {
         name: 'description',
         content:
-          '一个开源的Go语言实现的流媒体服务器开发框架,Monibuca 引擎 + 插件 = 定制化流媒体服务器'
-      }
+          '一个开源的Go语言实现的流媒体服务器开发框架,Monibuca 引擎 + 插件 = 定制化流媒体服务器',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
@@ -29,26 +27,24 @@ export default defineNuxtConfig({
       {
         type: 'text/javascript',
         src: 'https://cloudfront.loggly.com/js/loggly.tracker-latest.min.js',
-        async: true
-      }
-    ]
+        async: true,
+      },
+    ],
   },
   build: {
     postcss: {
-      postcssOptions: require('./postcss.config.js')
+      postcssOptions: require('./postcss.config.js'),
     },
-    transpile: lifecycle === 'build' ? ['element-plus'] : []
   },
-
-  components: true,
-
-  // vite plugins
   vite: {
     plugins: [
       Components({
-        dts: true,
-        resolvers: [IconsResolver({})]
-      })
-    ]
-  }
+        resolvers: [ElementPlusResolver()],
+      }),
+    ],
+    // @ts-expect-error: Missing ssr key
+    ssr: {
+      noExternal: ['element-plus'],
+    },
+  },
 })
