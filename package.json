@@ -1,24 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "start": "node .output/server/index.mjs",
-    "format": "prettier --trailing-comma es5 --single-quote --write '**/*.{ts,vue,json}'"
+    "build:pkg": "pnpm run prepare -r"
   },
   "devDependencies": {
-    "@element-plus/icons-vue": "^1.0.0",
-    "autoprefixer": "^10.4.2",
-    "element-plus": "^2.0.3",
-    "less": "^4.1.2",
-    "nuxt3": "^3.0.0-27428764.271289c",
-    "postcss": "^8.4.7",
-    "postcss-pxtorem": "^6.0.0",
-    "prettier": "^2.6.0",
-    "px2rem-loader": "^0.1.9",
-    "unplugin-vue-components": "^0.17.18"
-  },
-  "dependencies": {
-    "highlight.js": "^11.4.0"
+    "prettier": "^2.6.2"
   }
 }
