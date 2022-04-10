@@ -10,7 +10,7 @@ const list = [
     title: '极致简洁'
   },
   {
-    title: '高超的扩展能力'
+    title: '高可扩展'
   },
   {
     title: '简单易用'
@@ -37,43 +37,43 @@ function change(index: number) {
         <div class="plugin-content">
           <div class="plugin-item">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-rtsp</div>
-            <div class="plugin-item-content">这是插件介绍内容</div>
+            <div class="plugin-item-title">plugin-rtmp</div>
+            <div class="plugin-item-content">rmtp协议接受推拉、对外推拉</div>
           </div>
           <div class="plugin-item">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
             <div class="plugin-item-title">plugin-rtsp</div>
-            <div class="plugin-item-content">这是插件介绍内容</div>
+            <div class="plugin-item-content">rtsp协议接受推拉、对外推拉</div>
           </div>
           <div class="plugin-item">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-rtsp</div>
-            <div class="plugin-item-content">这是插件介绍内容</div>
+            <div class="plugin-item-title">plugin-hls</div>
+            <div class="plugin-item-content">内存模式、写盘模式HLS协议拉流播放</div>
           </div>
           <div class="plugin-item">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-rtsp</div>
-            <div class="plugin-item-content">这是插件介绍内容</div>
+            <div class="plugin-item-title">plugin-gb28181</div>
+            <div class="plugin-item-content">GB28181协议拉流播放、查看录像</div>
           </div>
           <div class="plugin-item">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-rtsp</div>
-            <div class="plugin-item-content">这是插件介绍内容</div>
+            <div class="plugin-item-title">plugin-webtrc</div>
+            <div class="plugin-item-content">支持WebRTC协议的推流和拉流</div>
           </div>
           <div class="plugin-item">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-rtsp</div>
-            <div class="plugin-item-content">这是插件介绍内容</div>
+            <div class="plugin-item-title">plugin-record</div>
+            <div class="plugin-item-content">支持flv、mp4格式录制功能</div>
           </div>
           <div class="plugin-item">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-rtsp</div>
-            <div class="plugin-item-content">这是插件介绍内容</div>
+            <div class="plugin-item-title">plugin-hdl</div>
+            <div class="plugin-item-content">HTTP-FLV格式拉流</div>
           </div>
           <div class="plugin-item">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-rtsp</div>
-            <div class="plugin-item-content">这是插件介绍内容</div>
+            <div class="plugin-item-title">自定义插件</div>
+            <div class="plugin-item-content">可便捷开发任意扩展功能的插件</div>
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@ function change(index: number) {
     <section id="m7s">
       <div class="box">
         <div class="title">
-          <div>定制化流媒体服务器</div>
+          <div>开源Go语言流媒体服务器开发框架</div>
           <img src="/images/m7s/title-bar.png" alt="">
         </div>
         <div class="m7s-feature">
@@ -92,7 +92,7 @@ function change(index: number) {
             <div class="left">
               <div class="feature-desc">
                 <div class="h1">简洁</div>
-                <p>代码设计追求极致精简、优雅</p>
+                <p>Go语言本身的简洁+代码设计追求极致精简、优雅，阅读源码变成一件愉快的事</p>
               </div>
               <!-- <div class="feature-desc">
                 <div class="h1">简洁</div>
@@ -124,7 +124,7 @@ function change(index: number) {
             <div class="left">
               <div class="feature-desc">
                 <div class="h1">易用</div>
-                <p>无需配置环境，无需安装运行时，直接下载可执行文件</p>
+                <p>无需配置环境，无需安装运行时，直接下载可执行文件（v3）</p>
               </div>
               <!-- <div class="feature-desc">
                 <div class="h1">易用</div>

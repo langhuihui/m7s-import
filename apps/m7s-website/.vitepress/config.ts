@@ -45,6 +45,20 @@ export default defineConfigWithTheme<ThemeConfig>({
         'data-spa': 'auto',
         defer: ''
       }
+    ],
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content: '开源,流媒体,Golang,Flv,HLS,RTMP,GB28181,RTSP,WebRTC,RTP,HDL,H265',
+      }
+    ],
+    [
+      'meta',
+      {
+        name: 'description',
+        content: '开源的Go语言实现的流媒体服务器开发框架',
+      }
     ]
   ],
 

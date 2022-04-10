@@ -11,7 +11,7 @@ const config = ref(data)
     <div class="box">
       <div class="left">
         <Logo></Logo>
-        <div class="logo">Monibuca</div>
+        <div class="logo">Monibuca v3.2.2</div>
       </div>
       <div class="right">
         <div v-for="(item, index) in config" :key="index" class="item">

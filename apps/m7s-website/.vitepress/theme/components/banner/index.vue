@@ -10,11 +10,11 @@ const config = ref(data)
     <div class="box">
       <div class="left">
         <div class="item-1">Monibuca</div>
-        <div class="item-2">定制化流媒体开发框架</div>
+        <div class="item-2">开源Go语言流媒体服务器开发框架</div>
         <div class="item-3">
-          <span>GO语言</span>
-          开源插件式流媒体服务器开发框架</div>
-        <div class="item-4">立即体验</div>
+          <span>m7s v4</span>
+          即将发布，敬请期待</div>
+        <a href="https://docs.m7s.live" target="_blank"><div class="item-4">快速开始</div></a>
       </div>
       <div class="right"></div>
     </div>
