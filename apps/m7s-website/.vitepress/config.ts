@@ -3,6 +3,7 @@ import { searchForWorkspaceRoot } from 'vite'
 import type { Config as ThemeConfig } from '@vue/theme'
 import baseConfig from '@vue/theme/config'
 import { headerPlugin } from './headerMdPlugin'
+import path from 'path'
 
 const nav = [
   {
@@ -64,6 +65,7 @@ export default defineConfigWithTheme<ThemeConfig>({
       md.use(headerPlugin)
     }
   },
+
 
   vite: {
     define: {
