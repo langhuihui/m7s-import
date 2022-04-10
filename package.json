@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "pnpm build --filter 'm7s-nuxt'"
+    "build": "pnpm build --filter 'm7s-shell'"
   },
   "devDependencies": {
     "prettier": "^2.6.2"
