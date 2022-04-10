@@ -23,7 +23,7 @@ const showZf = ref(false)
           </div>
         </div>
         <div class="item">
-          <div class="title">关注我们</div>
+          <div class="title">支持我们</div>
           <div class="icon-list">
             <div class="hover" v-if="showWx">
               <img src="/images/m7s/footer/wx-pay.jpg" alt />
@@ -46,7 +46,7 @@ const showZf = ref(false)
         </div>
       </div>
       <div class="p2">
-        <div class="rights">Copyright © Monibuca团队</div>
+        <div class="rights">Copyright © Monibuca开发团队</div>
       </div>
     </div>
   </div>
