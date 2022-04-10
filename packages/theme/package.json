@@ -33,6 +33,7 @@
     "test": "yarn lint && yarn type",
     "dev": "vitepress dev demo",
     "demo-build": "vitepress build demo",
+    "build": "vitepress build",
     "serve": "yarn demo-build && vitepress serve demo"
   },
   "dependencies": {

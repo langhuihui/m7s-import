@@ -1,0 +1,1 @@
+import{c as t,o as e}from"./app.d709594c.js";const a='{"title":"Monibuca - GO语言开源插件式流媒体服务器开发框架","description":"","frontmatter":{"page":true,"title":"Monibuca - GO语言开源插件式流媒体服务器开发框架"},"headers":[],"relativePath":"index.md","lastUpdated":null}',i={},s=Object.assign(i,{setup:a=>(a,i)=>(e(),t("div"))});export{a as __pageData,s as default};

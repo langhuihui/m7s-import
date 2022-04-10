@@ -1,26 +1,17 @@
-# m7s Monorepo
+# M7S
 
-## Start
-
-Install dependencies
+## 本地开发
 
 ```bash
-$ npm i -g pnpm
-$ pnpm -v
-# should >= 6.20.0
-$ pnpm install
+npm i -g pnpm
+pnpm i
+pnpm dev --filter "m7s-website"
 ```
 
-### m7s-website App
+## 构建部署
 
-```bash
-$ pnpm start --filter "m7s-website"
-```
+> 步骤：
 
-## Packages Development
-
-### packages/shared
-
-```bash
-$ pnpm dev --filter "@m7s/shared"
-```
+1. 执行 pnpm build --filter "m7s-website" 会将m7s-website的构建包拷贝到m7s-shell项目中的public目录下
+2. 提交代码
+3. 触发vercel，自动构建部署
