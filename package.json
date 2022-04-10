@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "pnpm build --filter 'm7s-shell'"
+    "build": "pnpm build --filter m7s-website && pnpm build --filter m7s-shell"
   },
   "devDependencies": {
     "prettier": "^2.6.2"
