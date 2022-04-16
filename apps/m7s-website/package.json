@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vitepress",
-    "build": "vitepress build && npm run copy",
-    "copy": " cp -r ./.vitepress/dist/ ../m7s-shell/public/",
+    "build": "vitepress build",
     "serve": "vitepress serve",
     "preinstall": "npx only-allow pnpm"
   },

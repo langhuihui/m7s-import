@@ -1,9 +1,35 @@
 {
-  "private": true,
+  "name": "m7s-monorepo",
+  "workspace": [
+    "m7s-website",
+    "@m7s/shared",
+    "@m7s/theme",
+    "@m7s/ui"
+  ],
   "scripts": {
-    "build": "pnpm build --filter m7s-website && pnpm build --filter m7s-shell"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "deploy": "turbo run build --scope=m7s-website --includeDependencies --no-deps"
+  },
+  "turbo": {
+    "pipeline": {
+      "dev": {
+        "cache": false
+      },
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          ".vitepress/dist/**"
+        ]
+      }
+    }
   },
   "devDependencies": {
-    "prettier": "^2.6.2"
+    "@vercel/node": "^1.14.1",
+    "pnpm": "^6.32.6",
+    "prettier": "^2.6.2",
+    "turbo": "^1.2.2"
   }
 }
