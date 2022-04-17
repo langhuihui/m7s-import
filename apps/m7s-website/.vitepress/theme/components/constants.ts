@@ -25,7 +25,7 @@ const data = [
       },
       {
         name: 'Rebebuca',
-        url: '/rebebuca'
+        url: 'https://rebebuca.com'
       }
     ]
   },
