@@ -41,8 +41,16 @@ const data = [
         url: 'https://monibuca.com/mac.tgz'
       },
       {
+        name: 'Mac(arm64)',
+        url: 'https://monibuca.com/mac_arm64.tgz'
+      },
+      {
         name: 'Linux',
         url: 'https://monibuca.com/linux.tgz'
+      },
+      {
+        name: 'Linux(arm64)',
+        url: 'https://monibuca.com/linux_arm64.tgz'
       }
     ]
   }
