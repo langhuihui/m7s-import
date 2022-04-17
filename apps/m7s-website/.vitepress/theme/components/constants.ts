@@ -34,15 +34,15 @@ const data = [
     children: [
       {
         name: 'Windows',
-        url: 'http://monibuca.com/windows.tgz'
+        url: 'https://monibuca.com/windows.tgz'
       },
       {
         name: 'Mac',
-        url: 'http://monibuca.com/mac.tgz'
+        url: 'https://monibuca.com/mac.tgz'
       },
       {
         name: 'Linux',
-        url: 'http://monibuca.com/linux.tgz'
+        url: 'https://monibuca.com/linux.tgz'
       }
     ]
   }
