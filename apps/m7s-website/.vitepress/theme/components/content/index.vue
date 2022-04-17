@@ -34,6 +34,10 @@ function init() {
 
 init()
 
+function jump(url: string) {
+  window.open(`https://github.com/Monibuca/${url}`)
+}
+
 </script>
 
 <template>
@@ -46,37 +50,37 @@ init()
           <img src="/images/m7s/title-bar.png" alt="">
         </div>
         <div class="plugin-content">
-          <div class="plugin-item">
+          <div class="plugin-item" @click="jump('plugin-rtmp')">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
             <div class="plugin-item-title">plugin-rtmp</div>
             <div class="plugin-item-content">rmtp协议接受推拉、对外推拉</div>
           </div>
-          <div class="plugin-item">
+          <div class="plugin-item" @click="jump('plugin-rtsp')">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
             <div class="plugin-item-title">plugin-rtsp</div>
             <div class="plugin-item-content">rtsp协议接受推拉、对外推拉</div>
           </div>
-          <div class="plugin-item">
+          <div class="plugin-item" @click="jump('plugin-hls')">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
             <div class="plugin-item-title">plugin-hls</div>
             <div class="plugin-item-content">内存模式、写盘模式HLS协议拉流播放</div>
           </div>
-          <div class="plugin-item">
+          <div class="plugin-item" @click="jump('plugin-gb28181')">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
             <div class="plugin-item-title">plugin-gb28181</div>
             <div class="plugin-item-content">GB28181协议拉流播放、查看录像</div>
           </div>
-          <div class="plugin-item">
+          <div class="plugin-item" @click="jump('plugin-webtrc')">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
             <div class="plugin-item-title">plugin-webtrc</div>
             <div class="plugin-item-content">支持WebRTC协议的推流和拉流</div>
           </div>
-          <div class="plugin-item">
+          <div class="plugin-item" @click="jump('plugin-record')">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
             <div class="plugin-item-title">plugin-record</div>
             <div class="plugin-item-content">支持flv、mp4格式录制功能</div>
           </div>
-          <div class="plugin-item">
+          <div class="plugin-item" @click="jump('plugin-hdl')">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
             <div class="plugin-item-title">plugin-hdl</div>
             <div class="plugin-item-content">HTTP-FLV格式拉流</div>

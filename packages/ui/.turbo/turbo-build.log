@@ -1,0 +1,10 @@
+[32m@m7s/ui:build: [0mcache hit, replaying output [2m3ba2e1749b18c8ac[0m
+[32m@m7s/ui:build: [0m
+[32m@m7s/ui:build: [0m> @m7s/ui@1.0.2 build /Users/godkun/Desktop/m7s/m7s-import/packages/ui
+[32m@m7s/ui:build: [0m> rollup --config rollup.config.js
+[32m@m7s/ui:build: [0m
+[32m@m7s/ui:build: [0m[36m
+[32m@m7s/ui:build: [0m[1mvue/index.ts[22m → [1m./dist/vue/index.js, ./es/vue/index.js, ./lib/vue/index.cjs[22m...[39m
+[32m@m7s/ui:build: [0mbabelHelpers: 'bundled' option was used by default. It is recommended to configure this option explicitly, read more here: https://github.com/rollup/plugins/tree/master/packages/babel#babelhelpers
+[32m@m7s/ui:build: [0m[1m[33m(!) Plugin node-resolve: Could not resolve import "vue/index.ts" in undefined using exports defined in /Users/godkun/Desktop/m7s/m7s-import/node_modules/.pnpm/vue@3.2.32/node_modules/vue/package.json.[39m[22m
+[32m@m7s/ui:build: [0m[32mcreated [1m./dist/vue/index.js, ./es/vue/index.js, ./lib/vue/index.cjs[22m in [1m2.1s[22m[39m
