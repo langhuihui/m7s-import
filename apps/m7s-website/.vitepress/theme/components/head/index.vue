@@ -19,6 +19,7 @@ const config = ref(data)
             <span>{{ item.name }}</span>
             <div class="nav-sheet-container">
               <a
+                target="_blank"
                 :href="j.url"
                 v-for="(j, i) in item.children"
                 :key="i"
