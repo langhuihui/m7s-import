@@ -3,7 +3,6 @@ import { UrlEnum } from '@m7s/shared/types'
 import { ref } from 'vue'
 import data from '../constants'
 import Roles from '../Roles.vue'
-const config = ref(data)
 const active = ref(0)
 const list = [
   {
@@ -23,6 +22,18 @@ const url = ref({
 function change(index: number) {
   active.value = index
 }
+
+function init() {
+  const time = setInterval(() => {
+    if (active.value == 2) {
+      active.value = 0
+      clearInterval(time)
+    } else active.value = active.value + 1
+  }, 3000)
+}
+
+init()
+
 </script>
 
 <template>
