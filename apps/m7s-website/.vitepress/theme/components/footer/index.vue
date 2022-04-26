@@ -42,7 +42,7 @@ const showZf = ref(false)
           </div>
         </div>
         <div class="item">
-          <img class="qun" src="/images/m7s/footer/wx-qun.png" alt />
+          <img class="qun" src="https://console.monibuca.com/api/files/wxqrcode.png" alt />
         </div>
       </div>
       <div class="p2">
