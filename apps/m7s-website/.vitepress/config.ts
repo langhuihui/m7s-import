@@ -5,12 +5,25 @@ import baseConfig from '@vue/theme/config'
 import { headerPlugin } from './headerMdPlugin'
 
 const nav = [
+  { text: '首页', link: '/' },
   {
-    text: 'Docs',
+    text: '文档',
     activeMatch: `^/(guide)/`,
     items: [
       { text: '指南', link: '/guide/introduction' }
     ]
+  },
+  {
+    text: '不卡系列',
+    items: [
+      { text: 'Monibuca', link: '/' },
+      { text: 'Jessibuca', link: 'https://jessibuca.com' },
+      { text: 'Rebebuca', link: 'https://rebebuca.com' }
+    ]
+  },
+  {
+    text: '控制台',
+    link: 'https://console.monibuca.com'
   }
 ]
 

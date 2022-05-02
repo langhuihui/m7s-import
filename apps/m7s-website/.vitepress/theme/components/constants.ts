@@ -8,7 +8,7 @@ const data = [
       },
       {
         name: '文档(v4)',
-        url: '/guide/introduction'
+        url: '/guide/introduction.html'
       },
       {
         name: '视频教程(v4)',
