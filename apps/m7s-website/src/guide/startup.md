@@ -12,19 +12,19 @@
 :::
 
 官方提供了最新版本的下载链接：
-- [Linux]()
-- [Linux-arm64]()
-- [Mac]()
-- [Mac-arm64]()
-- [Windows]()
+- [Linux](https://m7s.live/bin/m7s_linux_x86)
+- [Linux-arm64](https://m7s.live/bin/m7s_linux_arm64)
+- [Mac](https://m7s.live/bin/m7s_darwin_x86)
+- [Mac-arm64](https://m7s.live/bin/m7s_darwin_arm64)
+- [Windows](https://m7s.live/bin/m7s_windows_x86)
 
 ## 运行
 
 ### 可执行文件直接运行
 
-- Linux 例如下载到了/opt/m7s_x86,则 `cd /opt` 然后 `./m7s_x86`
+- Linux 例如下载到了/opt/m7s_linux_x86,则 `cd /opt` 然后 `./m7s_linux_x86`
 - Mac 和Linux类似，需要注意的时候可能需要修改文件的可执行权限，也可以双击运行
-- Windows，直接双击m7s_x86.exe即可启动
+- Windows，直接双击m7s_windows_x86.exe即可启动
 
 ### 自行编译启动工程
 1. `git clone https://github.com/langhuihui/monibuca`

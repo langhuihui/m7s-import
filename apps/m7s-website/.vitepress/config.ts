@@ -24,10 +24,8 @@ export const sidebar = {
         { text: '配置', link: '/guide/config' },
       ]
     },
-  ],
-  '/releasenote/': [
     {
-      text: '升级日志', 
+      text: '升级日志',
       items: [
         { text: 'v4', link: '/releasenote/v4' },
       ]
