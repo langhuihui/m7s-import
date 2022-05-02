@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import VPNavBarTitle from './VPNavBarTitle.vue'
-import VPNavBarSearch from './VPNavBarSearch.vue'
+// import VPNavBarSearch from './VPNavBarSearch.vue'
 import VPNavBarMenu from './VPNavBarMenu.vue'
 import VPNavBarAppearance from './VPNavBarAppearance.vue'
 import VPNavBarSocialLinks from './VPNavBarSocialLinks.vue'
