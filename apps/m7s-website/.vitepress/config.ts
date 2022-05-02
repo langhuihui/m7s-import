@@ -3,14 +3,13 @@ import { searchForWorkspaceRoot } from 'vite'
 import type { Config as ThemeConfig } from '@vue/theme'
 import baseConfig from '@vue/theme/config'
 import { headerPlugin } from './headerMdPlugin'
-import path from 'path'
 
 const nav = [
   {
     text: 'Docs',
     activeMatch: `^/(guide)/`,
     items: [
-      { text: 'Guide', link: '/guide/introduction' }
+      { text: '指南', link: '/guide/introduction' }
     ]
   }
 ]
@@ -18,12 +17,22 @@ const nav = [
 export const sidebar = {
   '/guide/': [
     {
-      text: '起步',
+      text: '开始',
       items: [
-        { text: 'Introduction', link: '/guide/introduction' },
+        { text: '介绍', link: '/guide/introduction' },
+        { text: '快速起步', link: '/guide/startup' },
+        { text: '配置', link: '/guide/config' },
       ]
     },
-  ]
+  ],
+  '/releasenote/': [
+    {
+      text: '升级日志', 
+      items: [
+        { text: 'v4', link: '/releasenote/v4' },
+      ]
+    }
+  ],
 }
 
 export default defineConfigWithTheme<ThemeConfig>({

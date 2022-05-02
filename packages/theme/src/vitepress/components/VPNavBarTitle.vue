@@ -1,7 +1,10 @@
 <template>
   <a class="VPNavBarTitle" href="/">
     <Logo></Logo>
-    <div class="logo">Monibuca</div>
+    <div class="logo">Monibuca
+      <span class="version">v4.0.0</span>
+      <span class="beta">beta</span>
+    </div>
   </a>
 </template>
 
@@ -24,6 +27,7 @@ import { Logo } from '@m7s/ui/vue'
 }
 
 .logo {
+  margin-left: 10px;
   font-size: 30px;
   position: relative;
 }
@@ -38,5 +42,15 @@ import { Logo } from '@m7s/ui/vue'
 .text {
   font-size: 16px;
   font-weight: 500;
+}
+.beta {
+  margin-left: 3px;
+  font-size: 16px;
+  padding:0 4px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: rgb(255, 213, 4) solid 1px;
+  color: rgb(255, 255, 255);
+  background-color: darkred
 }
 </style>

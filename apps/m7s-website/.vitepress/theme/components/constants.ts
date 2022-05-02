@@ -7,6 +7,10 @@ const data = [
         url: 'https://docs.m7s.live'
       },
       {
+        name: '文档(v4)',
+        url: '/guide/introduction'
+      },
+      {
         name: '视频教程(v4)',
         url: 'https://www.bilibili.com/medialist/play/328443019?from=space&business=space_series&business_id=2076672&desc=0&spm_id_from=333.999.0.0'
       }
