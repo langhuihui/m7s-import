@@ -18,7 +18,7 @@ defineProps<{
       <VPNavBarTitle />
 
       <div class="content">
-        <VPNavBarSearch class="search" />
+        <!-- <VPNavBarSearch class="search" /> -->
         <VPNavBarMenu class="menu" />
         <VPNavBarAppearance class="appearance" />
         <VPNavBarSocialLinks class="social-links" />
