@@ -34,16 +34,14 @@ export const sidebar = {
       items: [
         { text: '介绍', link: '/guide/introduction' },
         { text: '快速起步', link: '/guide/startup' },
-        { text: '配置', link: '/guide/config' },
+        { text: '配置', link: '/guide/config' }
       ]
     },
     {
       text: '升级日志',
-      items: [
-        { text: 'v4', link: '/releasenote/v4' },
-      ]
+      items: [{ text: 'v4', link: '/guide/v4' }]
     }
-  ],
+  ]
 }
 
 export default defineConfigWithTheme<ThemeConfig>({
