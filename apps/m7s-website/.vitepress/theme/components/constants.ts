@@ -1,13 +1,13 @@
 const data = [
   {
-    name: '开发',
+    name: '指南',
     children: [
       {
         name: '文档(v3)',
         url: 'https://docs.m7s.live'
       },
       {
-        name: '文档(v4)',
+        name: '使用文档(v4)',
         url: '/guide/introduction.html'
       },
       {

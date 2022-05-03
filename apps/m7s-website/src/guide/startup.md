@@ -26,6 +26,10 @@
 - Mac 和Linux类似，需要注意的时候可能需要修改文件的可执行权限，也可以双击运行
 - Windows，直接双击m7s_windows_x86.exe即可启动
 
+:::tip 运行多实例
+由于实例会监听http端口，所以如果需要运行多实例，就需要为每个实例指定不同的http端口，因此需要启动时指定配置文件，例如./m7s_linux_x86 -c config.yaml
+:::
+
 ### 自行编译启动工程
 1. `git clone https://github.com/langhuihui/monibuca`
 2. `cd monibuca`

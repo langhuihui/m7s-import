@@ -6,7 +6,7 @@ footer: false
 
 :::tip 您正在阅读的是m7s v4的文档
 - m7s v3 文档请访问https://docs.m7s.live
-- [v4升级的功能](/releasenote/v4)
+- [v4升级的功能](/guide/v4)
 :::
 
 ## 什么是Monibuca（m7s)？

@@ -10,7 +10,7 @@ const nav = [
     text: '文档',
     activeMatch: `^/(guide)/`,
     items: [
-      { text: '指南', link: '/guide/introduction' }
+      { text: '使用指南', link: '/guide/introduction' }
     ]
   },
   {
@@ -34,8 +34,13 @@ export const sidebar = {
       items: [
         { text: '介绍', link: '/guide/introduction' },
         { text: '快速起步', link: '/guide/startup' },
-        { text: '配置', link: '/guide/config' }
+        { text: '配置', link: '/guide/config' },
+        { text: 'API', link: '/guide/api' }
       ]
+    },
+    {
+      text: '官方插件',
+      items: [{ text: 'rtmp', link: '/guide/plugin/rtmp' }]
     },
     {
       text: '升级日志',
