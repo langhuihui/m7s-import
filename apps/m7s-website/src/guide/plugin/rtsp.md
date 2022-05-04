@@ -1,1 +1,1 @@
-E:/project/m7s4/plugin-rtsp/README.md
+/Users/dexter/m7s4/plugin-rtsp/README.md
