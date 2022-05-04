@@ -14,14 +14,6 @@
         {
           "key": "Access-Control-Allow-Methods",
           "value": "DELETE,PUT,POST,GET,OPTIONS"
-        },
-        {
-          "key": "Cross-Origin-Opener-Policy",
-          "value": "same-origin"
-        },
-        {
-          "key": "Cross-Origin-Embedder-Policy",
-          "value": "require-corp"
         }
       ]
     }
