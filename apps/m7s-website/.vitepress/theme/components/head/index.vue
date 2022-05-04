@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { Logo } from '@m7s/ui/vue'
 import data from '../constants'
-const config = ref(data)
+const config = data.slice(1)
 </script>
 
 <template>
@@ -18,18 +18,14 @@ const config = ref(data)
           <template v-if="item.children">
             <span>{{ item.name }}</span>
             <div class="nav-sheet-container">
-              <a
-                target="_blank"
-                :href="j.url"
-                v-for="(j, i) in item.children"
-                :key="i"
-                class="nav-sheet-item"
-              >{{ j.name }}</a>
+              <a target="_blank" :href="j.url" v-for="(j, i) in item.children" :key="i" class="nav-sheet-item">{{ j.name }}</a>
             </div>
           </template>
+          <span v-else><a target="_blank" :href="item.url" class="nav-sheet-item">{{ item.name }}</a></span>
         </div>
       </div>
     </div>
   </div>
 </template>
-<style lang="less" scoped src="./index.less"></style>
+<style lang="less" scoped src="./index.less">
+</style>

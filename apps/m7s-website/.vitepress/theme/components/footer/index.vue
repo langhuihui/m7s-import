@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import data from '../constants'
-const config = ref(data)
+const config = data.slice(1)
 const showWx = ref(false)
 const showZf = ref(false)
 </script>
