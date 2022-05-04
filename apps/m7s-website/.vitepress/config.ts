@@ -18,7 +18,12 @@ export const sidebar = {
     },
     {
       text: '官方插件',
-      items: [{ text: 'rtmp', link: '/guide/plugin/rtmp' }]
+      items: [
+        { text: 'rtmp', link: '/guide/plugin/rtmp' },
+        { text: 'rtsp', link: '/guide/plugin/rtsp' },
+        { text: 'hdl', link: '/guide/plugin/hdl' },
+        { text: 'hls', link: '/guide/plugin/hls' },
+      ]
     },
     {
       text: '升级日志',
