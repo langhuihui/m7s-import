@@ -14,6 +14,10 @@ const nav = [
     ]
   },
   {
+    text: '视频教程',
+    link: 'https://www.bilibili.com/medialist/play/328443019?from=space&business=space_series&business_id=2076672&desc=0&spm_id_from=333.999.0.0'
+  },
+  {
     text: '不卡系列',
     items: [
       { text: 'Monibuca', link: '/' },
@@ -24,6 +28,14 @@ const nav = [
   {
     text: '控制台',
     link: 'https://console.monibuca.com'
+  },
+  {
+    text:'关于',
+    items:[
+      { text: 'FAQ', link: '/about/faq' },
+      { text: '开发团队', link: '/about/team' },
+      { text: '诞生故事', link: '/about/born' },
+    ]
   }
 ]
 
