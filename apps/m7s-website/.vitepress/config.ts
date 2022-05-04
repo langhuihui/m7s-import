@@ -3,41 +3,7 @@ import { searchForWorkspaceRoot } from 'vite'
 import type { Config as ThemeConfig } from '@vue/theme'
 import baseConfig from '@vue/theme/config'
 import { headerPlugin } from './headerMdPlugin'
-
-const nav = [
-  { text: '首页', link: '/' },
-  {
-    text: '文档',
-    activeMatch: `^/(guide)/`,
-    items: [
-      { text: '使用指南', link: '/guide/introduction' }
-    ]
-  },
-  {
-    text: '视频教程',
-    link: 'https://www.bilibili.com/medialist/play/328443019?from=space&business=space_series&business_id=2076672&desc=0&spm_id_from=333.999.0.0'
-  },
-  {
-    text: '不卡系列',
-    items: [
-      { text: 'Monibuca', link: '/' },
-      { text: 'Jessibuca', link: 'https://jessibuca.com' },
-      { text: 'Rebebuca', link: 'https://rebebuca.com' }
-    ]
-  },
-  {
-    text: '控制台',
-    link: 'https://console.monibuca.com'
-  },
-  {
-    text:'关于',
-    items:[
-      { text: 'FAQ', link: '/about/faq' },
-      { text: '开发团队', link: '/about/team' },
-      { text: '诞生故事', link: '/about/born' },
-    ]
-  }
-]
+import nav from './theme/components/constants'
 
 export const sidebar = {
   '/guide/': [
@@ -57,6 +23,16 @@ export const sidebar = {
     {
       text: '升级日志',
       items: [{ text: 'v4', link: '/guide/v4' }]
+    }
+  ],
+  '/about/': [
+    {
+      text: '关于',
+      items: [
+        { text: 'FAQ', link: '/about/faq' },
+        { text: '开发团队', link: '/about/team' },
+        { text: '诞生故事', link: '/about/born' },
+      ]
     }
   ]
 }
@@ -98,7 +74,14 @@ export default defineConfigWithTheme<ThemeConfig>({
   ],
 
   themeConfig: {
-    nav,
+    nav: nav.map(item => {
+      const result = {
+        text: item.name,
+        link: item.url,
+        items: item.children?.map(child => ({ text: child.name, link: child.url }))
+      }
+      return result
+    }),
     sidebar,
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/Monibuca/' }],

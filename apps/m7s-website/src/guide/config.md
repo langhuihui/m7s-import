@@ -36,6 +36,11 @@ global: #全局配置
     consoleurl: wss://console.monibuca.com:8080 # 远程管理界面地址
     secret: "" # 远程管理的密钥
 ```
+
+## 回调格式
+
+
+
 ## 插件配置
 
 请查看插件文档
