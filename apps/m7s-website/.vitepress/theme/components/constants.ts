@@ -89,12 +89,14 @@ const data = [
 ]
 
 export const menu = data.slice(1).map(item => {
-  const result = {
-    name: item.name,
-    url: item.url + ".html",
-    children: item.children?.map(child => ({ name: child.name, url: child.url + ".html" }))
+  if (item.activeMatch) {
+    const result = {
+      name: item.name,
+      children: item.children?.map(child => ({ name: child.name, url: child.url + ".html" }))
+    }
+    return result
   }
-  return result
+  return item
 })
 export const nav = data.map(item => {
   const result = {
