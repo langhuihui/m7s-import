@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
 import { Logo } from '@m7s/ui/vue'
-import data from '../constants'
-const config = data.slice(1)
+import { menu } from '../constants'
 </script>
 
 <template>
@@ -14,7 +12,7 @@ const config = data.slice(1)
         <div class="logo">Monibuca</div>
       </div>
       <div class="right">
-        <div v-for="(item, index) in config" :key="index" class="item">
+        <div v-for="(item, index) in menu" :key="index" class="item">
           <template v-if="item.children">
             <span>{{ item.name }}</span>
             <div class="nav-sheet-container">

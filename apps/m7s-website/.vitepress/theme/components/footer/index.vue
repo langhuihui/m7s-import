@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import data from '../constants'
-const config = data.slice(1)
+import { menu } from '../constants'
 const showWx = ref(false)
 const showZf = ref(false)
 </script>
@@ -9,7 +8,7 @@ const showZf = ref(false)
   <div class="footer" id="footer">
     <div class="box">
       <div class="p1">
-        <div class="item" v-for="(item, index) in config" :key="index">
+        <div class="item" v-for="(item, index) in menu" :key="index">
           <div class="title">
             <span v-if="item.url">
               <a :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
@@ -51,4 +50,5 @@ const showZf = ref(false)
     </div>
   </div>
 </template>
-<style lang="less" scoped src="./index.less"></style>
+<style lang="less" scoped src="./index.less">
+</style>

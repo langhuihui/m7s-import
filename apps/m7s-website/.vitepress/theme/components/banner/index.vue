@@ -1,9 +1,3 @@
-<script lang="ts" setup>
-import { ref } from 'vue'
-import data from '../constants'
-const config = ref(data)
-</script>
-
 <template>
   <!--顶部导航 -->
   <div class="banner" id="banner">

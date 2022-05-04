@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { UrlEnum } from '@m7s/shared/types'
 import { ref } from 'vue'
-import data from '../constants'
 import Roles from '../Roles.vue'
 const active = ref(0)
 const list = [
@@ -110,7 +109,9 @@ function jump(url: string) {
                 <p>Go语言本身的简洁+代码设计追求极致精简、优雅，阅读源码变成一件愉快的事</p>
                 <p>启动工程提供了标准化的接入示例，插件引入十分简单</p>
               </div>
-              <a href="https://github.com/langhuihui/monibuca"><div class="btn">查看示例</div></a>
+              <a href="https://github.com/langhuihui/monibuca">
+                <div class="btn">查看示例</div>
+              </a>
             </div>
             <div class="right">
               <img src="/images/m7s/plugin-go-code.png" alt="" srcset="">
@@ -123,7 +124,9 @@ function jump(url: string) {
                 <p>设计精巧的插件机制，实现高内聚低耦合，具有高超的扩展能力</p>
                 <p>无锁化设计以及手术刀般精确的内存复用，充分利用多核计算，性能强悍</p>
               </div>
-               <a href="https://github.com/Monibuca"><div class="btn">Github</div></a>
+              <a href="https://github.com/Monibuca">
+                <div class="btn">Github</div>
+              </a>
             </div>
             <div class="right">
               <Roles class="role" />
@@ -136,7 +139,9 @@ function jump(url: string) {
                 <p>无需配置环境，无需安装运行时，直接下载可执行文件（v3）</p>
                 <p>为arm架构提供贴心的编译版本，可以直接下载运行</p>
               </div>
-             <a href="https://github.com/langhuihui/monibuca/releases"> <div class="btn">所有版本</div></a>
+              <a href="https://github.com/langhuihui/monibuca/releases">
+                <div class="btn">所有版本</div>
+              </a>
             </div>
             <div class="right">
               <div class="download">
@@ -158,4 +163,5 @@ function jump(url: string) {
     </section>
   </div>
 </template>
-<style lang="less" scoped src="./index.less"></style>
+<style lang="less" scoped src="./index.less">
+</style>

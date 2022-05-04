@@ -1,5 +1,1 @@
-# rtmp
-
-## 配置
-
-## API
+E:/project/m7s4/plugin-rtmp/README.md

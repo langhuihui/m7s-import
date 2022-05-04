@@ -3,7 +3,7 @@ import { searchForWorkspaceRoot } from 'vite'
 import type { Config as ThemeConfig } from '@vue/theme'
 import baseConfig from '@vue/theme/config'
 import { headerPlugin } from './headerMdPlugin'
-import nav from './theme/components/constants'
+import { nav } from './theme/components/constants'
 
 export const sidebar = {
   '/guide/': [
@@ -74,14 +74,7 @@ export default defineConfigWithTheme<ThemeConfig>({
   ],
 
   themeConfig: {
-    nav: nav.map(item => {
-      const result = {
-        text: item.name,
-        link: item.url,
-        items: item.children?.map(child => ({ text: child.name, link: child.url }))
-      }
-      return result
-    }),
+    nav,
     sidebar,
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/Monibuca/' }],

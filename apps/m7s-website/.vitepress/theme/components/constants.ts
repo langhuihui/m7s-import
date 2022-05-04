@@ -53,23 +53,23 @@ const data = [
     children: [
       {
         name: 'Windows',
-        url: 'https://m7s.live/bin/m7s_windows_x86.exe'
+        url: 'https://m7s.live/bin/m7s_windows_amd64.tar.gz'
       },
       {
         name: 'Mac',
-        url: 'https://m7s.live/bin/m7s_darwin_x86'
+        url: 'https://m7s.live/bin/m7s_darwin_amd64.tar.gz'
       },
       {
         name: 'Mac(arm64)',
-        url: 'https://m7s.live/bin/m7s_darwin_arm64'
+        url: 'https://m7s.live/bin/m7s_darwin_arm64.tar.gz'
       },
       {
         name: 'Linux',
-        url: 'https://m7s.live/bin/m7s_linux_x86'
+        url: 'https://m7s.live/bin/m7s_linux_amd64.tar.gz'
       },
       {
         name: 'Linux(arm64)',
-        url: 'https://m7s.live/bin/m7s_linux_arm64'
+        url: 'https://m7s.live/bin/m7s_linux_arm64.tar.gz'
       }
     ]
   },
@@ -88,4 +88,19 @@ const data = [
   }
 ]
 
-export default data
+export const menu = data.slice(1).map(item => {
+  const result = {
+    name: item.name,
+    url: item.url + ".html",
+    children: item.children?.map(child => ({ name: child.name, url: child.url + ".html" }))
+  }
+  return result
+})
+export const nav = data.map(item => {
+  const result = {
+    text: item.name,
+    link: item.url,
+    items: item.children?.map(child => ({ text: child.name, link: child.url }))
+  }
+  return result
+})
