@@ -23,6 +23,7 @@ export const sidebar = {
         { text: 'rtsp', link: '/guide/plugin/rtsp' },
         { text: 'hdl', link: '/guide/plugin/hdl' },
         { text: 'hls', link: '/guide/plugin/hls' },
+        { text: 'debug', link: '/guide/plugin/debug' },
       ]
     },
     {
