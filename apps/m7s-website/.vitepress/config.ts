@@ -25,6 +25,10 @@ export const sidebar = {
         { text: 'hls', link: '/guide/plugins/hls' },
         { text: 'record', link: '/guide/plugins/record' },
         { text: 'debug', link: '/guide/plugins/debug' },
+        { text: 'jessica', link: '/guide/plugins/jessica' },
+        { text: 'logrotate', link: '/guide/plugins/logrotate' },
+        { text: 'webrtc', link: '/guide/plugins/webrtc' },
+        { text: 'webtransport', link: '/guide/plugins/webtransport' },
       ]
     },
     {
