@@ -2,8 +2,8 @@
 
 1. 该插件可用来拉取网络上的m3u8文件并解析后转换成其他协议
 2. 该插件可以在服务器写HLS文件，并且可以播放
-3. 可以直接访问http://localhost:8080/hls/live/user1.m3u8 进行播放，其中8080端口是全局HTTP配置，live/user1是streamPath，需要根据实际情况修改
-4. 支持回放功能，即每次发布流后均会产生一个m3u8文件，可以通过该文件进行回放 http://localhost:8080/hls/live/user1/xxxxxxxxxx.m3u8 其中xxxxxxxx代表发布的时间戳（Unix时间戳）
+3. 可以直接访问`http://localhost:8080/hls/live/user1.m3u8` 进行播放，其中8080端口是全局HTTP配置，live/user1是streamPath，需要根据实际情况修改
+4. 支持回放功能，即每次发布流后均会产生一个m3u8文件，可以通过该文件进行回放 `http://localhost:8080/hls/live/user1/xxxxxxxxxx.m3u8` 其中xxxxxxxx代表发布的时间戳（Unix时间戳）
 ## API
 > 参数是可变的，下面的参数live/hls是作为例子，不是固定的
 - /hls/api/list
