@@ -23,10 +23,12 @@ export const sidebar = {
         { text: 'rtsp', link: '/guide/plugins/rtsp' },
         { text: 'hdl', link: '/guide/plugins/hdl' },
         { text: 'hls', link: '/guide/plugins/hls' },
+        { text: 'gb28181', link: '/guide/plugins/gb28181' },
         { text: 'record', link: '/guide/plugins/record' },
         { text: 'debug', link: '/guide/plugins/debug' },
         { text: 'jessica', link: '/guide/plugins/jessica' },
         { text: 'logrotate', link: '/guide/plugins/logrotate' },
+        { text: 'hook', link: '/guide/plugins/hook' },
         { text: 'webrtc', link: '/guide/plugins/webrtc' },
         { text: 'webtransport', link: '/guide/plugins/webtransport' },
       ]
