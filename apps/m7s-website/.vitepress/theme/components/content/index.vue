@@ -69,9 +69,9 @@ function jump(url: string) {
             <div class="plugin-item-title">plugin-gb28181</div>
             <div class="plugin-item-content">GB28181协议拉流播放、查看录像</div>
           </div>
-          <div class="plugin-item" @click="jump('plugin-webtrc')">
+          <div class="plugin-item" @click="jump('plugin-webrtc')">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-webtrc</div>
+            <div class="plugin-item-title">plugin-webrtc</div>
             <div class="plugin-item-content">支持WebRTC协议的推流和拉流</div>
           </div>
           <div class="plugin-item" @click="jump('plugin-record')">
