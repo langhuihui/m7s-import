@@ -5,10 +5,6 @@
   import Content from './content/index.vue'
   import Footer from './footer/index.vue'
   import { UrlEnum } from '@m7s/shared/types'
-  import { ref, onMounted } from 'vue'
-  const url = ref({
-    ...UrlEnum,
-  })
 </script>
 
 <template>

@@ -189,12 +189,44 @@
           }
         }
       }
+      .stream-path-content{
+        &>div {
+          margin: 20px;
+        }
+        background-color: #000000;
+        color: gray;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .stream-path-input {
+          color: #ffe300;
+          width: 200px;
+          height: 40px;
+          padding: 10px;
+          background-color: rgb(38, 38, 38);
+          border: #959595 solid 1px;
+        }
+        .URL {
+          color: white;
+          height: 40px;
+          line-height: 40px;
+        }
+        select {
+          color: #ffe300;
+          width: 100px;
+          padding-left: 10px;
+          height: 40px;
+          background-color: rgb(38, 38, 38);
+          border: #959595 solid 1px;
+        }
+      }
     }
   }
 }
-
-#plugin {
-  margin-top: 130px;
+#stream-path {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #m7s {
@@ -203,7 +235,6 @@
 
 @media (max-width: 960px) {
   #plugin {
-    margin-top: 50px;
     .box {
       width: 100%;
       .title {
