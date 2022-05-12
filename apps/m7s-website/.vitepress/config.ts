@@ -29,6 +29,7 @@ export const sidebar = {
         { text: 'jessica', link: '/guide/plugins/jessica' },
         { text: 'logrotate', link: '/guide/plugins/logrotate' },
         { text: 'hook', link: '/guide/plugins/hook' },
+        { text: 'room', link: '/guide/plugins/room' },
         { text: 'webrtc', link: '/guide/plugins/webrtc' },
         { text: 'webtransport', link: '/guide/plugins/webtransport' },
       ]
