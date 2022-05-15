@@ -8,7 +8,8 @@ const data = [
     name: 'v4文档',
     activeMatch: `^/(guide)/`,
     children: [
-      { name: '使用指南', url: '/guide/introduction' }
+      { name: '使用指南', url: '/guide/introduction' },
+      { name: '开发指南', url: '/devel/startup' }
     ]
   },
   {

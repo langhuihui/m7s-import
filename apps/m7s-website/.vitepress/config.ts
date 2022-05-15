@@ -39,6 +39,16 @@ export const sidebar = {
       items: [{ text: 'v4', link: '/guide/v4' }]
     }
   ],
+  '/devel/': [
+    {
+      text: '开发',
+      items: [
+        { text: '准备', link: '/devel/startup' },
+        { text: '插件', link: '/devel/plugins' },
+        { text: '接口', link: '/devel/api' },
+      ]
+    }
+  ],
   '/about/': [
     {
       text: '关于',
