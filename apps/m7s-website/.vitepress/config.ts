@@ -44,7 +44,7 @@ export const sidebar = {
       text: '开发',
       items: [
         { text: '准备', link: '/devel/startup' },
-        { text: '定义插件', link: '/devel/plugins' },
+        { text: '定义插件', link: '/devel/plugin' },
         { text: '插件接口', link: '/devel/api' },
         { text: '发布者', link: '/devel/publisher' },
         { text: '拉流者', link: '/devel/puller' },
