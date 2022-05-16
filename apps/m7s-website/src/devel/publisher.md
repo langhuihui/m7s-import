@@ -24,7 +24,7 @@ type MyPublisher struct {
 }
 ```
 
-包含 Publisher 后，就自动实现了 IPublisher 接口。
+包含 `Publisher` 后，就自动实现了 `IPublisher` 接口。
 这个结构体中可以随意的放入自己需要的属性。
 
 ## 定义发布者事件回调

@@ -6,7 +6,7 @@
 ## 标准写法
 
 以下是插件的定义和安装插件的最简代码，这个插件没有任何作用。(该插件名称为"MyPlugin")
-插件定义必须包含一个OnEvent方法来接收所有的插件事件包括事件总线的事件。
+插件定义必须包含一个`OnEvent`方法来接收所有的插件事件包括事件总线的事件。
 ```go
 import . "m7s.live/engine/v4"
 type MyPluginConfig struct {
@@ -38,14 +38,14 @@ import 	"m7s.live/engine/v4/config"
 type MyPluginConfig struct {
   config.HTTP
   config.Publish
-	config.Pull
-	config.Subscribe
+  config.Pull
+  config.Subscribe
   config.Push
 }
 ```
 可以选择其中一个或者多个预设结构体来定义插件的配置，使得插件具备特定的能力。
 这些配置项可以覆盖全局配置。
 
-:::tip 强制性
+:::warning 强制性
 如果插件需要实现发布者能力，则必须加入`config.Publish`配置结构体，因为在注册发布流的时候会自动读取发布者配置信息。
 :::
