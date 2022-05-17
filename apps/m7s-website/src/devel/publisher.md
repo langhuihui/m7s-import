@@ -14,7 +14,7 @@
 
 ## 定义发布者
 
-虽然可以直接使用 Publisher 作为发布者，但是通常我们需要自定义一个结构，里面包含 Publisher，这样就成为了一个特定功能的 Publisher。
+虽然可以直接使用 `Publisher` 作为发布者，但是通常我们需要自定义一个结构，里面包含 `Publisher`，这样就成为了一个特定功能的 `Publisher`。
 
 ```go
 import . "m7s.live/engine/v4"
@@ -50,14 +50,34 @@ func (p *MyPublisher) OnEvent(event any) {
       } else {
         //订阅者进入
       }
+    default:
+      p.Publisher.OnEvent(event)
   }
+}
+```
+通常IPublisher、SEclose、SEKick三个事件我们直接交给Publisher处理。(即从上方的default进入)内部代码如下：
+
+```go
+func (p *Publisher) OnEvent(event any) {
+	switch v := event.(type) {
+	case IPublisher:
+		if p.Equal(v) { //第一任
+			p.AudioTrack = p.Stream.NewAudioTrack()
+			p.VideoTrack = p.Stream.NewVideoTrack()
+		} else { // 使用前任的track，因为订阅者都挂在前任的上面
+			p.AudioTrack = v.getAudioTrack()
+			p.VideoTrack = v.getVideoTrack()
+		}
+	default:
+		p.IO.OnEvent(event)
+	}
 }
 ```
 ## 开始发布
 
 发布流需要先注册发布流，成功后可以对音视频轨道进行写入数据。
 
-### 注册发布流
+### 注册发布流（发布）
 
 ```go
 pub := new(MyPublisher)
