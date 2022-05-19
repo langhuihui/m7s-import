@@ -3,7 +3,7 @@
 这里的拉流者指的是从远程拉流的功能。
 
 :::tip
-可以结合官方插件中对Puller的使用，来掌握发布者的使用方法。包含Puller功能的插件有rtmp、rtsp、hls、hdl
+可以结合官方插件中对Puller的使用，来掌握拉流者的使用方法。包含Puller功能的插件有rtmp、rtsp、hls、hdl
 :::
 
 
