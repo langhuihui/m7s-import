@@ -20,10 +20,10 @@ rtmp://localhost/live/test
 - m7s中`live/test`将作为`streamPath`为流的唯一标识
 
 
-例如通过ffmpeg向m7s进行推流
+例如通过ffmpeg向m7s进行推流,默认ffmpeg会将编码格式转成mpeg1，所以需要指定编码格式：
 
 ```bash
-ffmpeg -i [视频源] -f flv rtmp://localhost/live/test
+ffmpeg -i [视频源] -c:v h264 -c:a aac -f flv rtmp://localhost/live/test
 ```
 
 会在m7s内部形成一个名为live/test的流
@@ -31,9 +31,11 @@ ffmpeg -i [视频源] -f flv rtmp://localhost/live/test
 
 如果m7s中已经存在live/test流的话就可以用rtmp协议进行播放
 ```bash
-ffplay -i rtmp://localhost/live/test
+ffplay -fflags nobuffer  -i rtmp://localhost/live/test
 ```
 
+vlc 播放修改缓冲减少延迟
+https://blog.csdn.net/u014029448/article/details/105300284
 
 ## 配置
 
@@ -62,6 +64,7 @@ rtmp:
         repush: 0 # 当断开后是否自动重新推流，0代表不进行重新推流，-1代表无限次重新推流
         pushlist: {} # 推流列表，以 streamPath为key，远程地址为value
     chunksize: 4096
+    keepalive: false #保持rtmp连接，默认随着stream的close而主动断开
 ```
 :::tip 配置覆盖
 publish
