@@ -13,12 +13,226 @@ Monibuca 提供 HTTP 形式的 API 调用，方便用户对 Monibuca 实例进�
 :::tip SSE
 部分 API 默认以 SSE（[Server-Sent Events](https://developer.mozilla.org/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)）形式返回信息，通常是那些需要每隔几秒就刷新的数据，通过对 API 附加 json=1 来改变返回的形式，成为一次返回 json 格式的方式。
 :::
+### `/api/plugins`
+```json
+获取所有插件的信息
+
+{
+  "Debug": {
+    "Name": "Debug",
+    "Version": "",
+    "RawConfig": null,
+    "Modified": null
+  },
+  "GB28181": {
+    "Name": "GB28181",
+    "Version": "",
+    "RawConfig": {
+      "publish": {
+        "kickexist": false,
+        "pubaudio": true,
+        "publishtimeout": 10,
+        "pubvideo": true,
+        "waitclosetimeout": 0
+      }
+    },
+    "Modified": null
+  },
+  "HDL": {
+    "Name": "HDL",
+    "Version": "",
+    "RawConfig": {
+      "http": {
+        "certfile": "monibuca.com.pem",
+        "cors": true,
+        "keyfile": "monibuca.com.key",
+        "listenaddr": ":8080",
+        "listenaddrtls": ":8081",
+        "password": "",
+        "username": ""
+      },
+      "publish": {
+        "kickexist": false,
+        "pubaudio": true,
+        "publishtimeout": 10,
+        "pubvideo": true,
+        "waitclosetimeout": 0
+      },
+      "subscribe": {
+        "iframeonly": false,
+        "subaudio": true,
+        "subvideo": true,
+        "waittimeout": 10
+      }
+    },
+    "Modified": null
+  },
+  "HLS": {
+    "Name": "HLS",
+    "Version": "",
+    "RawConfig": {
+      "publish": {
+        "kickexist": false,
+        "pubaudio": true,
+        "publishtimeout": 10,
+        "pubvideo": true,
+        "waitclosetimeout": 0
+      },
+      "subscribe": {
+        "iframeonly": false,
+        "subaudio": true,
+        "subvideo": true,
+        "waittimeout": 10
+      }
+    },
+    "Modified": null
+  },
+  "Hook": {
+    "Name": "Hook",
+    "Version": "",
+    "RawConfig": null,
+    "Modified": null
+  },
+  "Jessica": {
+    "Name": "Jessica",
+    "Version": "",
+    "RawConfig": {
+      "http": {
+        "certfile": "monibuca.com.pem",
+        "cors": true,
+        "keyfile": "monibuca.com.key",
+        "listenaddr": ":8080",
+        "listenaddrtls": ":8081",
+        "password": "",
+        "username": ""
+      },
+      "subscribe": {
+        "iframeonly": false,
+        "subaudio": true,
+        "subvideo": true,
+        "waittimeout": 10
+      }
+    },
+    "Modified": null
+  },
+  "LogRotate": {
+    "Name": "LogRotate",
+    "Version": "",
+    "RawConfig": null,
+    "Modified": null
+  },
+  "Preview": {
+    "Name": "Preview",
+    "Version": "",
+    "RawConfig": null,
+    "Modified": null
+  },
+  "RTMP": {
+    "Name": "RTMP",
+    "Version": "",
+    "RawConfig": {
+      "publish": {
+        "kickexist": false,
+        "pubaudio": true,
+        "publishtimeout": 10,
+        "pubvideo": true,
+        "waitclosetimeout": 0
+      },
+      "subscribe": {
+        "iframeonly": false,
+        "subaudio": true,
+        "subvideo": true,
+        "waittimeout": 10
+      }
+    },
+    "Modified": null
+  },
+  "RTSP": {
+    "Name": "RTSP",
+    "Version": "",
+    "RawConfig": {
+      "publish": {
+        "kickexist": false,
+        "pubaudio": true,
+        "publishtimeout": 10,
+        "pubvideo": true,
+        "waitclosetimeout": 0
+      },
+      "subscribe": {
+        "iframeonly": false,
+        "subaudio": true,
+        "subvideo": true,
+        "waittimeout": 10
+      }
+    },
+    "Modified": null
+  },
+  "Record": {
+    "Name": "Record",
+    "Version": "",
+    "RawConfig": {
+      "subscribe": {
+        "iframeonly": false,
+        "subaudio": true,
+        "subvideo": true,
+        "waittimeout": 10
+      }
+    },
+    "Modified": null
+  },
+  "Room": {
+    "Name": "Room",
+    "Version": "",
+    "RawConfig": {
+      "http": {
+        "certfile": "monibuca.com.pem",
+        "cors": true,
+        "keyfile": "monibuca.com.key",
+        "listenaddr": ":8080",
+        "listenaddrtls": ":8081",
+        "password": "",
+        "username": ""
+      }
+    },
+    "Modified": null
+  },
+  "WebRTC": {
+    "Name": "WebRTC",
+    "Version": "",
+    "RawConfig": {
+      "publish": {
+        "kickexist": false,
+        "pubaudio": true,
+        "publishtimeout": 10,
+        "pubvideo": true,
+        "waitclosetimeout": 0
+      },
+      "subscribe": {
+        "iframeonly": false,
+        "subaudio": true,
+        "subvideo": true,
+        "waittimeout": 10
+      }
+    },
+    "Modified": null
+  },
+  "WebTransport": {
+    "Name": "WebTransport",
+    "Version": "",
+    "RawConfig": {
+      "certfile": "monibuca.com.pem",
+      "keyfile": "monibuca.com.key"
+    },
+    "Modified": null
+  }
+}
+```
 
 ### `/api/summary?json=1`
 
 获取采样数据,包括 CPU、内存、网卡数据、以及流信息
 
-```json
+```jsonjson
 {
   "Address": "",
   "Memory": {
