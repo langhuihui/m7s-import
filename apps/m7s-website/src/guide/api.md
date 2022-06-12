@@ -232,7 +232,7 @@ Monibuca 提供 HTTP 形式的 API 调用，方便用户对 Monibuca 实例进�
 
 获取采样数据,包括 CPU、内存、网卡数据、以及流信息
 
-```jsonjson
+```json
 {
   "Address": "",
   "Memory": {
