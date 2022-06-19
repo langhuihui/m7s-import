@@ -354,7 +354,7 @@ Monibuca 提供 HTTP 形式的 API 调用，方便用户对 Monibuca 实例进�
 
 系统信息，包含版本号（Version）和启动时间（StartTime）两个字段
 
-### `/api/stopstream?streamPath=xxx`
+### `/api/closestream?streamPath=xxx`
 
 终止某一个流，入参是流标识（streamPath）
 
