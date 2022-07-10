@@ -1,0 +1,5 @@
+# v4.0.0-beta9
+## Changelog
+* 7a0964b Merge branch 'v4' of github.com:langhuihui/monibuca into v4
+
+
