@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { UrlEnum } from '@m7s/shared/types'
-import { ref,computed } from 'vue'
+import { ref, computed } from 'vue'
 import Roles from '../Roles.vue'
 const active = ref(0)
 const server = ref("localhost")
@@ -40,42 +40,55 @@ init()
 function jump(url: string) {
   window.open(`https://github.com/Monibuca/${url}`)
 }
-function onChangeServer(evt:Event){
+function onChangeServer(evt: Event) {
   server.value = evt.target.value
 }
-function onChangeStreamPath(evt){
+function onChangeStreamPath(evt) {
   streamPath.value = evt.target.value
 }
-function onChangePush(evt){
+function onChangePush(evt) {
   pushProtocol.value = evt.target.value
 }
-function onChangePull(evt){
+function onChangePull(evt) {
   pullProtocol.value = evt.target.value
 }
-const pushURL = computed(()=>{
-  switch(pushProtocol.value){
+const pushURL = computed(() => {
+  switch (pushProtocol.value) {
     case "rtmp":
-      return "rtmp://"+server.value+"/"+streamPath.value
+      return "rtmp://" + server.value + "/" + streamPath.value
     case "rtsp":
-      return "rtsp://"+server.value+"/"+streamPath.value
+      return "rtsp://" + server.value + "/" + streamPath.value
   }
 })
-const pullURL = computed(()=>{
-  switch(pullProtocol.value){
+const pullURL = computed(() => {
+  switch (pullProtocol.value) {
     case "rtmp":
-      return "rtmp://"+server.value+"/"+streamPath.value
+      return "rtmp://" + server.value + "/" + streamPath.value
     case "rtsp":
-      return "rtsp://"+server.value+"/"+streamPath.value
+      return "rtsp://" + server.value + "/" + streamPath.value
     case "hls":
-      return "http://"+server.value+":8080/hls/"+streamPath.value+".m3u8"
+      return "http://" + server.value + ":8080/hls/" + streamPath.value + ".m3u8"
     case "hdl":
-      return "http://"+server.value+":8080/hdl/"+streamPath.value+".flv"
+      return "http://" + server.value + ":8080/hdl/" + streamPath.value + ".flv"
     case "ws-flv":
-      return "ws://"+server.value+":8080/ws-flv/"+streamPath.value+".flv"
+      return "ws://" + server.value + ":8080/ws-flv/" + streamPath.value + ".flv"
     case "ws-raw":
-      return "ws://"+server.value+":8080/ws-flv/"+streamPath.value
+      return "ws://" + server.value + ":8080/ws-flv/" + streamPath.value
   }
 })
+const plugins = {
+  rtmp: "rtmp协议接受推拉、对外推拉",
+  rtsp: "rtsp协议接受推拉、对外推拉",
+  hls: "1、提供HLS协议拉流播放。2、远程拉取HLS到m7s",
+  gb28181: "GB28181协议拉流播放、查看录像",
+  webrtc: "WebRTC协议的推流和拉流",
+  record: "hls、flv、mp4、裸流格式录制功能以及回放",
+  hdl: "1、HTTP-FLV格式拉流播放。2、远程拉取HTTP-FLV到m7s",
+  preview: "借助Jessibuca提供视频实时预览能力",
+  snap: "提供对I帧的实时截图能力",
+  room: "提供房间功能，可以向房间内用户广播信息",
+  hook: "提供API钩子回调能力，通知远程服务器"
+}
 </script>
 
 <template>
@@ -157,40 +170,10 @@ const pullURL = computed(()=>{
           <img src="/images/m7s/title-bar.png" alt="">
         </div>
         <div class="plugin-content">
-          <div class="plugin-item" @click="jump('plugin-rtmp')">
+          <div class="plugin-item" @click="jump('plugin-' + name)" v-for="(item, name) in plugins">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-rtmp</div>
-            <div class="plugin-item-content">rmtp协议接受推拉、对外推拉</div>
-          </div>
-          <div class="plugin-item" @click="jump('plugin-rtsp')">
-            <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-rtsp</div>
-            <div class="plugin-item-content">rtsp协议接受推拉、对外推拉</div>
-          </div>
-          <div class="plugin-item" @click="jump('plugin-hls')">
-            <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-hls</div>
-            <div class="plugin-item-content">内存模式、写盘模式HLS协议拉流播放</div>
-          </div>
-          <div class="plugin-item" @click="jump('plugin-gb28181')">
-            <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-gb28181</div>
-            <div class="plugin-item-content">GB28181协议拉流播放、查看录像</div>
-          </div>
-          <div class="plugin-item" @click="jump('plugin-webrtc')">
-            <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-webrtc</div>
-            <div class="plugin-item-content">支持WebRTC协议的推流和拉流</div>
-          </div>
-          <div class="plugin-item" @click="jump('plugin-record')">
-            <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-record</div>
-            <div class="plugin-item-content">支持flv、mp4格式录制功能</div>
-          </div>
-          <div class="plugin-item" @click="jump('plugin-hdl')">
-            <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">plugin-hdl</div>
-            <div class="plugin-item-content">HTTP-FLV格式拉流</div>
+            <div class="plugin-item-title">plugin-{{ name }}</div>
+            <div class="plugin-item-content">{{ item }}</div>
           </div>
           <div class="plugin-item">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
@@ -214,13 +197,13 @@ const pullURL = computed(()=>{
               <option value="rtsp">rtsp</option>
             </select>
             <div>推流地址：</div>
-            <div class="URL">{{pushURL}}</div>
+            <div class="URL">{{ pushURL }}</div>
           </div>
           <div>
             <div>Server:</div>
-            <input type="text" class="stream-path-input" :value="server" @input="onChangeServer"/>
+            <input type="text" class="stream-path-input" :value="server" @input="onChangeServer" />
             <div>StreamPath:</div>
-            <input type="text" class="stream-path-input" :value="streamPath" @input="onChangeStreamPath"/>
+            <input type="text" class="stream-path-input" :value="streamPath" @input="onChangeStreamPath" />
           </div>
           <div>
             <div>选择拉流协议：</div>
@@ -230,10 +213,10 @@ const pullURL = computed(()=>{
               <option value="hls">hls</option>
               <option value="hdl">hdl</option>
               <option value="ws-flv">ws-flv</option>
-               <option value="ws-raw">ws-raw</option>
+              <option value="ws-raw">ws-raw</option>
             </select>
             <div>拉流地址：</div>
-            <div class="URL">{{pullURL}}</div>
+            <div class="URL">{{ pullURL }}</div>
           </div>
         </div>
       </div>

@@ -7,4 +7,6 @@ title: Monibuca - GO语言开源插件式流媒体服务器开发框架
 import Home from '/@theme/components/M7S.vue'
 </script>
 
-<Home />
+<Home>
+<<< src/release.txt
+</Home>

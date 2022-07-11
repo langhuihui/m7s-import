@@ -13,7 +13,9 @@
       <Head></Head>
     </div>
     <div class="app-banner">
-      <Banner></Banner>
+      <Banner>
+        <slot></slot>
+      </Banner>
     </div>
     <div class="app-main">
       <Content></Content>
