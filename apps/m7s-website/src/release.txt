@@ -1,5 +1,10 @@
 # v4.0.0
 ## Changelog
+* d12052e 修复gb28181插件ssrc取值以及ip获取的兼容性
+
+
+# v4.0.0
+## Changelog
 * 9234c10 修复gb28181插件ssrc取值以及ip获取的兼容性
 
 
