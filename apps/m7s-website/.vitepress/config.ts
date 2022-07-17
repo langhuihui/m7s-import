@@ -72,7 +72,7 @@ export default defineConfigWithTheme<ThemeConfig>({
 
   lang: 'en-zh',
   title: 'Monibuca',
-  description: 'Monibuca - 定制化流媒体开发框架',
+  description: 'Monibuca - Go语言开源流媒体服务器开发框架',
   srcDir: 'src',
   scrollOffset: 'header',
   lastUpdated: true,

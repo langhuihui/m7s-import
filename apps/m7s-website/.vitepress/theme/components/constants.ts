@@ -1,15 +1,11 @@
 const data = [
   { name: '首页', url: '/' },
   {
-    name: 'v3文档',
-    url: 'https://docs.m7s.live'
-  },
-  {
-    name: 'v4文档',
+    name: '文档',
     activeMatch: `^/(guide)/`,
     children: [
       { name: '使用指南', url: '/guide/introduction' },
-      { name: '开发指南', url: '/devel/startup' }
+      { name: '开发指南', url: '/devel/startup' },
     ]
   },
   {
@@ -25,32 +21,7 @@ const data = [
     ]
   },
   {
-    name: '下载v3',
-    children: [
-      {
-        name: 'Windows',
-        url: 'https://monibuca.com/windows.tgz'
-      },
-      {
-        name: 'Mac',
-        url: 'https://monibuca.com/mac.tgz'
-      },
-      {
-        name: 'Mac(arm64)',
-        url: 'https://monibuca.com/mac_arm64.tgz'
-      },
-      {
-        name: 'Linux',
-        url: 'https://monibuca.com/linux.tgz'
-      },
-      {
-        name: 'Linux(arm64)',
-        url: 'https://monibuca.com/linux_arm64.tgz'
-      }
-    ]
-  },
-  {
-    name: '下载v4',
+    name: '下载',
     children: [
       {
         name: 'Windows',

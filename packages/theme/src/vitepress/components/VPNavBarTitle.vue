@@ -2,8 +2,7 @@
   <a class="VPNavBarTitle" href="/">
     <Logo></Logo>
     <div class="logo">Monibuca
-      <span class="version">v4.0.0</span>
-      <span class="beta">beta</span>
+      <span class="version">v4</span>
     </div>
   </a>
 </template>
