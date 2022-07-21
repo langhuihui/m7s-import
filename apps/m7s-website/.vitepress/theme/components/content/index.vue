@@ -71,9 +71,9 @@ const pullURL = computed(() => {
     case "hdl":
       return "http://" + server.value + ":8080/hdl/" + streamPath.value + ".flv"
     case "ws-flv":
-      return "ws://" + server.value + ":8080/ws-flv/" + streamPath.value + ".flv"
+      return "ws://" + server.value + ":8080/jessica/" + streamPath.value + ".flv"
     case "ws-raw":
-      return "ws://" + server.value + ":8080/ws-flv/" + streamPath.value
+      return "ws://" + server.value + ":8080/jessica/" + streamPath.value
   }
 })
 const plugins = {
