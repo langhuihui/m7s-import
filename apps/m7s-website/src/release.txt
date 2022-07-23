@@ -1,3 +1,8 @@
+# v4.0.1
+## Changelog
+* 29f574a 增加10s的fps和bps历史统计，rtsp插件增加拉流时强制指定协议的配置，修复若干bug
+
+
 # v4.0.0
 ## Changelog
 * d12052e 修复gb28181插件ssrc取值以及ip获取的兼容性
