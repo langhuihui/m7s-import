@@ -138,7 +138,7 @@ const plugins = {
             <div class="left">
               <div class="feature-desc">
                 <div class="h1">易用</div>
-                <p>无需配置环境，无需安装运行时，直接下载可执行文件（v3）</p>
+                <p>无需配置环境，无需安装运行时，直接下载可执行文件</p>
                 <p>为arm架构提供贴心的编译版本，可以直接下载运行</p>
               </div>
               <a href="https://github.com/langhuihui/monibuca/releases">
