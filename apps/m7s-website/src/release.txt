@@ -1,3 +1,8 @@
+# v4.0.2
+## Changelog
+* 4486c61 对rtmp协议写入数据增加判空逻辑
+
+
 # v4.0.1
 ## Changelog
 * 29f574a 增加10s的fps和bps历史统计，rtsp插件增加拉流时强制指定协议的配置，修复若干bug
