@@ -1,9 +1,9 @@
-import { defineConfigWithTheme } from 'vitepress'
-import { searchForWorkspaceRoot } from 'vite'
-import type { Config as ThemeConfig } from '@vue/theme'
-import baseConfig from '@vue/theme/config'
-import { headerPlugin } from './headerMdPlugin'
-import { nav } from './theme/components/constants'
+import { defineConfigWithTheme } from 'vitepress';
+import { searchForWorkspaceRoot } from 'vite';
+import type { Config as ThemeConfig } from '@vue/theme';
+import baseConfig from '@vue/theme/config';
+import { headerPlugin } from './headerMdPlugin';
+import { nav } from './theme/components/constants';
 
 export const sidebar = {
   '/guide/': [
@@ -39,6 +39,13 @@ export const sidebar = {
     {
       text: '升级日志',
       items: [{ text: 'v4', link: '/guide/v4' }]
+    },
+    {
+      text: '常见问题',
+      items: [
+        { text: '推流问题', link: '/guide/qa/push' },
+        { text: '播放问题', link: '/guide/qa/play' },
+      ]
     }
   ],
   '/devel/': [
@@ -65,7 +72,7 @@ export const sidebar = {
       ]
     }
   ]
-}
+};
 
 export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
@@ -117,7 +124,7 @@ export default defineConfigWithTheme<ThemeConfig>({
 
   markdown: {
     config(md) {
-      md.use(headerPlugin)
+      md.use(headerPlugin);
     }
   },
 
@@ -155,4 +162,4 @@ export default defineConfigWithTheme<ThemeConfig>({
   vue: {
     reactivityTransform: true
   }
-})
+});
