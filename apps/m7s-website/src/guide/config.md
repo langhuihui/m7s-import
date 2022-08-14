@@ -15,7 +15,8 @@ global: #全局配置
         pubvideo: true # 是否发布视频
         kickexist: false # 是否提出已经存在的发布者
         publishtimeout: 10 # 发布者无数据10秒后自动发布失败
-        waitclosetimeout: 0 # 当无人订阅时N秒后自动关闭流，0代表不关闭
+        delayclosetimeout: 0 # 当无人订阅时延迟关闭时间，单位秒，0表示不延迟关闭
+        waitclosetimeout: 0 # 当发布者下线后延迟关闭流时间（用于等待重连上线），0代表使用订阅者的waittimeout，单位秒
     subscribe: # 订阅者配置（可被插件中相同的配置项覆盖）
         subaudio: true # 是否订阅音频
         subvideo: true # 是否订阅视频
