@@ -1,3 +1,8 @@
+# v4.0.5
+## Changelog
+* da69aae 修复gb插件中的pts和dts覆盖bug，兼容rtsp协议sdp中无sps和pps问题
+
+
 # v4.0.4
 ## Changelog
 * 6e8081a 1、增加配置日志级别；2、发布者增加可以配置断线延迟退出时间配置
