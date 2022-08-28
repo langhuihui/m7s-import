@@ -1,3 +1,8 @@
+# v4.0.6
+## Changelog
+* 87f0806 API增加获取远端导入的流以及向远端推流的信息
+
+
 # v4.0.5
 ## Changelog
 * da69aae 修复gb插件中的pts和dts覆盖bug，兼容rtsp协议sdp中无sps和pps问题
