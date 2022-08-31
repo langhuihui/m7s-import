@@ -43,6 +43,9 @@ const showZf = ref(false)
         <div class="item">
           <img class="qun" src="https://console.monibuca.com/api/files/wxqrcode.png" alt />
         </div>
+         <div class="item">
+          <img class="qun" src="/images/m7s/footer/qq-qun.jpeg" alt />
+        </div>
       </div>
       <div class="p2">
         <div class="rights">Copyright © Monibuca开发团队</div>
