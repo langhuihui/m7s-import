@@ -1,50 +1,44 @@
+# v4.0.8
+* e035cf0 👌 IMPROVE: 增加rtsp拉流报错信息，gb插件增加ps流dump功能方便排查错误
+
+
 # v4.0.7
-## Changelog
 * f82c423 🚀 RELEASE: 修复远端拉流保存并发问题，修复gb拉流PS包解析bug，导出部分插件
 
 
 # v4.0.6
-## Changelog
 * 87f0806 API增加获取远端导入的流以及向远端推流的信息
 
 
 # v4.0.5
-## Changelog
 * da69aae 修复gb插件中的pts和dts覆盖bug，兼容rtsp协议sdp中无sps和pps问题
 
 
 # v4.0.4
-## Changelog
 * 6e8081a 1、增加配置日志级别；2、发布者增加可以配置断线延迟退出时间配置
 
 
 # v4.0.3
-## Changelog
 * 70b5c55 修复数据轨道释放导致读取错误，以及写入annexb格式时的dts生成问题
 
 
 # v4.0.2
-## Changelog
 * 4486c61 对rtmp协议写入数据增加判空逻辑
 
 
 # v4.0.1
-## Changelog
 * 29f574a 增加10s的fps和bps历史统计，rtsp插件增加拉流时强制指定协议的配置，修复若干bug
 
 
 # v4.0.0
-## Changelog
 * d12052e 修复gb28181插件ssrc取值以及ip获取的兼容性
 
 
 # v4.0.0
-## Changelog
 * 9234c10 修复gb28181插件ssrc取值以及ip获取的兼容性
 
 
 # v4.0.0-beta9
-## Changelog
 * 7a0964b Merge branch 'v4' of github.com:langhuihui/monibuca into v4
 
 
