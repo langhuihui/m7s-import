@@ -1,3 +1,7 @@
+# v4.0.10
+* 0fd608a 🐛 FIX: engine中订阅关键帧被覆盖问题，gb的ptzcmd中发送的deviceID值问题，acc的rtp包超过一个mtu时的解析问题
+
+
 # v4.0.9
 * d5e6a51 🐛 FIX: dts在无B帧情况下的生成机制修正，gb插件增加设备信息持久化重启实例后可快速恢复
 
