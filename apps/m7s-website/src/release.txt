@@ -1,3 +1,7 @@
+# v4.0.11
+* ca2f695 🐛 FIX: gb拉流信令拼接错误
+
+
 # v4.0.10
 * 0fd608a 🐛 FIX: engine中订阅关键帧被覆盖问题，gb的ptzcmd中发送的deviceID值问题，acc的rtp包超过一个mtu时的解析问题
 
