@@ -24,6 +24,10 @@
       "destination": "/api/engine"
     },
     {
+      "source": "/plugin/transcode/v4",
+      "destination": "/api/plugin-pro"
+    },
+    {
       "source": "/plugin/(.*)",
       "destination": "/api/plugin"
     }
