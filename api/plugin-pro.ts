@@ -7,7 +7,7 @@ export default function (req: VercelRequest, res: VercelResponse) {
 <html>
 
 <head>
-  <meta name="go-import" content="m7s.live/plugin/${parts[2]}/v4 git ssh://git@github.com:Monibuca/plugin-${parts[2]}">
+  <meta name="go-import" content="m7s.live/plugin/${parts[2]}/v4 git ssh://git@github.com/Monibuca/plugin-${parts[2]}">
   <meta name="go-source"
     content="m7s.live/plugin/${parts[2]}/v4 _ https://github.com/Monibuca/plugin-${parts[2]}/tree/v4{/dir} https://github.com/Monibuca/plugin-${parts[2]}/tree/v4{/dir}/{file}#L{line}">
   <meta http-equiv="refresh" content="0; url=https://pkg.go.dev/m7s.live/plugin/${parts[2]}/v4">
