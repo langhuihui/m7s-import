@@ -34,6 +34,7 @@ export const sidebar = {
         { text: 'room', link: '/guide/plugins/room' },
         { text: 'preview', link: '/guide/plugins/preview' },
         { text: 'snap', link: '/guide/plugins/snap' },
+        { text: 'edge', link: '/guide/plugins/edge' },
       ]
     },
     {
