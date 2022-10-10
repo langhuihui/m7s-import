@@ -5,7 +5,7 @@ const data = [
     activeMatch: `^/(guide)/`,
     children: [
       { name: '使用指南', url: '/guide/introduction' },
-      { name: '开发指南', url: '/devel/startup' },
+      { name: '开发指南', url: '/devel/startup' }
     ]
   },
   {
@@ -56,25 +56,32 @@ const data = [
       { name: 'FAQ', url: '/about/faq' },
       { name: '开发团队', url: '/about/team' },
       { name: '诞生故事', url: '/about/born' },
+      { name: '开源社区', url: 'https://opencollective.com/monibuca' }
     ]
   }
 ]
 
-export const menu = data.slice(1).map(item => {
+export const menu = data.slice(1).map((item) => {
   if (item.activeMatch) {
     const result = {
       name: item.name,
-      children: item.children?.map(child => ({ name: child.name, url: child.url + ".html" }))
+      children: item.children?.map((child) => ({
+        name: child.name,
+        url: child.url + '.html'
+      }))
     }
     return result
   }
   return item
 })
-export const nav = data.map(item => {
+export const nav = data.map((item) => {
   const result = {
     text: item.name,
     link: item.url,
-    items: item.children?.map(child => ({ text: child.name, link: child.url }))
+    items: item.children?.map((child) => ({
+      text: child.name,
+      link: child.url
+    }))
   }
   return result
 })

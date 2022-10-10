@@ -1,9 +1,9 @@
-import { defineConfigWithTheme } from 'vitepress';
-import { searchForWorkspaceRoot } from 'vite';
-import type { Config as ThemeConfig } from '@vue/theme';
-import baseConfig from '@vue/theme/config';
-import { headerPlugin } from './headerMdPlugin';
-import { nav } from './theme/components/constants';
+import { defineConfigWithTheme } from 'vitepress'
+import { searchForWorkspaceRoot } from 'vite'
+import type { Config as ThemeConfig } from '@vue/theme'
+import baseConfig from '@vue/theme/config'
+import { headerPlugin } from './headerMdPlugin'
+import { nav } from './theme/components/constants'
 
 export const sidebar = {
   '/guide/': [
@@ -34,7 +34,7 @@ export const sidebar = {
         { text: 'room', link: '/guide/plugins/room' },
         { text: 'preview', link: '/guide/plugins/preview' },
         { text: 'snap', link: '/guide/plugins/snap' },
-        { text: 'edge', link: '/guide/plugins/edge' },
+        { text: 'edge', link: '/guide/plugins/edge' }
       ]
     },
     {
@@ -45,7 +45,7 @@ export const sidebar = {
       text: '常见问题',
       items: [
         { text: '推流问题', link: '/guide/qa/push' },
-        { text: '播放问题', link: '/guide/qa/play' },
+        { text: '播放问题', link: '/guide/qa/play' }
       ]
     }
   ],
@@ -59,7 +59,7 @@ export const sidebar = {
         { text: '发布者', link: '/devel/publisher' },
         { text: '拉流者', link: '/devel/puller' },
         { text: '订阅者', link: '/devel/subscriber' },
-        { text: '推流者', link: '/devel/pusher' },
+        { text: '推流者', link: '/devel/pusher' }
       ]
     }
   ],
@@ -69,11 +69,11 @@ export const sidebar = {
       items: [
         { text: 'FAQ', link: '/about/faq' },
         { text: '开发团队', link: '/about/team' },
-        { text: '诞生故事', link: '/about/born' },
+        { text: '诞生故事', link: '/about/born' }
       ]
     }
   ]
-};
+}
 
 export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
@@ -89,6 +89,12 @@ export default defineConfigWithTheme<ThemeConfig>({
     [
       'script',
       {
+        src: 'https://hm.baidu.com/hm.js?6f9fb3a11639b7e2db0819676f002c55'
+      }
+    ],
+    [
+      'script',
+      {
         src: 'https://cdn.usefathom.com/script.js',
         'data-site': 'XNOLWPLB',
         'data-spa': 'auto',
@@ -99,14 +105,15 @@ export default defineConfigWithTheme<ThemeConfig>({
       'meta',
       {
         name: 'keywords',
-        content: '开源,流媒体,Golang,Flv,HLS,RTMP,GB28181,RTSP,WebRTC,RTP,HDL,H265',
+        content:
+          '开源,流媒体,Golang,Flv,HLS,RTMP,GB28181,RTSP,WebRTC,RTP,HDL,H265'
       }
     ],
     [
       'meta',
       {
         name: 'description',
-        content: '开源的Go语言实现的流媒体服务器开发框架',
+        content: '开源的Go语言实现的流媒体服务器开发框架'
       }
     ]
   ],
@@ -125,10 +132,9 @@ export default defineConfigWithTheme<ThemeConfig>({
 
   markdown: {
     config(md) {
-      md.use(headerPlugin);
+      md.use(headerPlugin)
     }
   },
-
 
   vite: {
     define: {
@@ -163,4 +169,4 @@ export default defineConfigWithTheme<ThemeConfig>({
   vue: {
     reactivityTransform: true
   }
-});
+})
