@@ -1,3 +1,7 @@
+# v4.1.4
+* 33b5c46 🐛 FIX: 修复aac包比较小的情况下导致访问越界问题
+
+
 # v4.1.3
 * 2b1bf24 🐛 修复logrotate插件windows下编译失败的bug
 
