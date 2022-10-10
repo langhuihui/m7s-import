@@ -8,18 +8,8 @@ const showZf = ref(false)
   <div class="footer" id="footer">
     <div class="box">
       <div class="p1">
-        <div class="item" v-for="(item, index) in menu" :key="index">
-          <div class="title">
-            <span v-if="item.url">
-              <a :href="item.url" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
-            </span>
-            <span v-else>{{ item.name }}</span>
-          </div>
-          <div class="product" v-for="(j, i) in item.children" :key="i">
-            <span>
-              <a :href="j.url" target="_blank" rel="noopener noreferrer">{{ j.name }}</a>
-            </span>
-          </div>
+        <div class="item" >
+          <a href="https://opencollective.com/monibuca" target="_blank">Monibuca 开源社区</a>
         </div>
         <div class="item">
           <div class="title">支持我们</div>
@@ -48,7 +38,7 @@ const showZf = ref(false)
         </div>
       </div>
       <div class="p2">
-        <div class="rights">Copyright © Monibuca开发团队</div>
+        <div class="rights">Copyright © Monibuca 开发团队</div>
       </div>
     </div>
   </div>

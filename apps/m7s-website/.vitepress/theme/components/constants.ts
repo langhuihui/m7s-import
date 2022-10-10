@@ -55,8 +55,7 @@ const data = [
     children: [
       { name: 'FAQ', url: '/about/faq' },
       { name: '开发团队', url: '/about/team' },
-      { name: '诞生故事', url: '/about/born' },
-      { name: '开源社区', url: 'https://opencollective.com/monibuca' }
+      { name: '诞生故事', url: '/about/born' }
     ]
   }
 ]
