@@ -1,3 +1,7 @@
+# v4.1.9
+* 5482ab4 👌 IMPROVE: 更先进的rtp包乱序重排算法
+
+
 # v4.1.8
 * 61eaaab 🐛 FIX: gb插件dts防止自动生成
 
