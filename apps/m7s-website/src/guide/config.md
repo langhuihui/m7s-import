@@ -43,6 +43,7 @@ global: #全局配置
     enablertp: true # 是否开启rtp包格式缓存
     enableflv: true # 是否开启flv格式缓存
     loglevel: info # 日志级别
+    rtpreorderbufferlen: 50 # rtp乱序重排缓存长度
 ```
 
 ## 插件配置
