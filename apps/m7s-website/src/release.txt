@@ -1,3 +1,7 @@
+# v4.2.2
+* c0b2a10 👌 IMPROVE: hls支持h265以及G711，Gb28181支持AAC
+
+
 # v4.2.1
 * 1a57aeb 🐛 FIX: rtmp握手协议，SEI帧处理
 
