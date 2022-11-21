@@ -15,13 +15,18 @@
         </div>
         <div class="item-2">开源Go语言流媒体服务器开发框架</div>
         <div class="item-3">
-          <slot>
+          <!-- <slot>
             <span>v4.0.0</span>
-          </slot>
+          </slot> -->
         </div>
-        <a href="https://m7s.live/guide/introduction.html" target="_blank">
-          <div class="item-4">快速开始</div>
-        </a>
+        <div class="flex">
+          <a href="https://m7s.live/guide/introduction.html" target="_blank">
+            <div class="item-4">快速开始</div>
+          </a>
+          <a href="https://github.com/Monibuca" target="_blank" style="margin-left: 20px;">
+            <div class="item-4">Github</div>
+          </a>
+        </div>
       </div>
       <div class="right"></div>
     </div>
