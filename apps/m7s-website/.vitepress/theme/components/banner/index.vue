@@ -23,7 +23,7 @@
           <a href="https://m7s.live/guide/introduction.html" target="_blank">
             <div class="item-4">快速开始</div>
           </a>
-          <a href="https://github.com/Monibuca" target="_blank" style="margin-left: 20px;">
+          <a href="https://github.com/langhuihui/monibuca" target="_blank" style="margin-left: 20px;">
             <div class="item-4">Github</div>
           </a>
         </div>
