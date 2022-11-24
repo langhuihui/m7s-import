@@ -1,10 +1,8 @@
 <script setup lang="ts">
-  import Roles from './Roles.vue'
   import Head from './head/index.vue'
   import Banner from './banner/index.vue'
   import Content from './content/index.vue'
   import Footer from './footer/index.vue'
-  import { UrlEnum } from '@m7s/shared/types'
 </script>
 
 <template>

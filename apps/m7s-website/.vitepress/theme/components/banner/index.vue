@@ -28,9 +28,15 @@
           </a>
         </div>
       </div>
-      <div class="right"></div>
+      <div class="right">
+        <Image/>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="less" scoped src="./index.less"></style>
+<script lang="ts" setup>
+import Image from './Image.vue'
+
+</script>
