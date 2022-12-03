@@ -9,8 +9,14 @@ const data = [
     ]
   },
   {
-    name: '视频教程',
-    url: 'https://www.bilibili.com/medialist/play/328443019?from=space&business=space_series&business_id=2076672&desc=0&spm_id_from=333.999.0.0'
+    name: 'B站视频',
+    children: [
+      {
+        name: '视频教程',
+        url: 'https://space.bilibili.com/328443019/channel/collectiondetail?sid=514619'
+      },
+      { name: 'RTS分享', url: 'https://www.bilibili.com/video/BV1jg411H7qE/' }
+    ]
   },
   {
     name: '不卡系列',
