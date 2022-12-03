@@ -1107,7 +1107,7 @@
   </g>
 </svg>
 </template>
-<style>
+<style scoped>
       .cls-1 {
         mask: url(#mask);
         filter: url(#luminosity-noclip-4);
