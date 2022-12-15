@@ -1,3 +1,7 @@
+# v4.3.0
+* 7138565 engine升级到4.9.0，升级hls、hook、record、room
+
+
 # v4.2.9
 * a521c63 fix: 最后订阅者离开条件判断，edge插件只能拉一路的bug
 
