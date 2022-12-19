@@ -1,3 +1,7 @@
+# v4.3.2
+* 34394b9 1.增加http配置中的timeout参数，用于设置http响应的超时时间 2.http配置增加自定义中间件功能 3.hdl插件和jessica插件增加对http超时的处理
+
+
 # v4.3.0
 * 7138565 engine升级到4.9.0，升级hls、hook、record、room
 
