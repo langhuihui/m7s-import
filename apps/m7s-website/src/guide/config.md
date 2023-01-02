@@ -51,4 +51,41 @@ global:
 
 ## 插件配置
 
-请查看插件文档
+:::tip 插件配置由插件定义
+每个插件的具体配置信息请查看插件文档
+:::
+
+### 拉流配置
+
+某些插件包含从远端拉流的能力，故具有拉流配置，这些配置的格式都是一致的，如下：
+
+```yaml
+某插件:
+  pull:
+    repull: 10
+    pullonstart:
+      live/test: [URL1]
+      live/test2: [URL2]
+    pullonsub:
+      live/test3: [URL3]
+      live/test4: [URL4]
+```
+- 其中`repull`代表重试的次数，如果设置为`-1`则为无限重试，`0`则是不重试
+- `pullonstart`代表随着`m7s`启动，则立即进行拉流
+- `pullonstart`是一个键值对映射（map）`key`代表拉流进入`m7s`后的`streamPath`，`value`就是远程流地址。
+- `pullonsub`代表的是按需拉流，即`m7s`收到指定流的订阅时才开始拉流。
+- `pullonsub`也是一个键值对映射（map）格式同`pullonstart`
+
+### 推流配置
+某些插件包含向远端服务器推流的能力，故具有推流配置，这些配置的格式都是一致的，如下：
+```yaml
+某插件:
+  push:
+    repush: 10
+    pushlist:
+      live/test: [URL1]
+      live/test2: [URL2]
+```
+- 其中`repush`代表重试的次数，如果设置为`-1`则为无限重试，`0`则是不重试
+- `pushlist`是一个键值对映射（map）`key`代表`streamPath`，`value`就是远程流地址。
+- 当`m7s`中一旦出现map中包含的流时，就会推流到远端服务器
