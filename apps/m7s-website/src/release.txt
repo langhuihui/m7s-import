@@ -1,3 +1,7 @@
+# v4.3.5
+* f8e50d0 注释一处println
+
+
 # v4.3.4
 * 361b052 1.修复Stream序列化循环引用问题 2.实现对subscribe中SubVideoTracks和SubAudioTracks的支持 3.修复读取ts中aac格式数据多次flush问题 4.修复subscribe结束时判断IsClosed调用对象错误 5.增加DefaultYaml功能解决插件默认配置被全局配置覆盖问题 6.修复rtsp插件订阅时参数未传入问题 7.snap插件和record插件采用DefaultYaml默认配置
 
