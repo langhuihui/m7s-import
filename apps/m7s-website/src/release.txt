@@ -1,3 +1,7 @@
+# v4.3.4
+* 361b052 1.修复Stream序列化循环引用问题 2.实现对subscribe中SubVideoTracks和SubAudioTracks的支持 3.修复读取ts中aac格式数据多次flush问题 4.修复subscribe结束时判断IsClosed调用对象错误 5.增加DefaultYaml功能解决插件默认配置被全局配置覆盖问题 6.修复rtsp插件订阅时参数未传入问题 7.snap插件和record插件采用DefaultYaml默认配置
+
+
 # v4.3.3
 * 27784f0 1.修复delayclosetimeout值被覆盖的bug 2.重构流中订阅者集合，减少订阅者对轨道的无效等待 3.实现内部订阅者功能，使得HLS插件不再影响最后一个订阅者离开逻辑 4.破坏性修改：pull配置中pullonstart类型改为map，pullonsubscribe修改为pullonsub，类型改为map 5.rtmp插件增加对远端流rtmps协议的支持，优化握手过程 6.修复gb28181插件对时间戳的处理bug（引起跳秒等问题） 7.hdl插件对重连机制进行优化，对于服务器返回非200的连接不再重连
 
