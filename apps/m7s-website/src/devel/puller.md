@@ -33,7 +33,7 @@ func (puller *MyPuller) Connect() (err error) {
 第二个需要实现的接口就是拉流事件回调，在这个回调里面需要去拉流。
 
 ```go
-func (puller *MyPuller) Pull()  {
+func (puller *MyPuller) Pull() error {
   //拉流，将数据填入Publisher的Track中
 }
 ```
@@ -46,7 +46,7 @@ func (puller *MyPuller) Pull()  {
 此外也有按需拉流，和调用API后拉流的功能，调用方式也是一样。
 
 ```go
-plugin.Pull(streamPath, url, new(MyPuller), false)
+plugin.Pull(streamPath, url, new(MyPuller), 0)
 ```
 如果需要则特定的条件下拉流，可以以上面的以编程方式调用开始拉流。
 

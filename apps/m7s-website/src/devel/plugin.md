@@ -18,6 +18,13 @@ func (p *MyPluginConfig) OnEvent(event any) {
     case FirstConfig: //插件初始化逻辑
     case Config://插件热更新逻辑
     case *Stream://按需拉流逻辑
+    case SEwaitPublish://由于发布者掉线等待发布者
+    case SEpublish://进入发布状态
+    case SEsubscribe://订阅者逻辑
+    case SEwaitClose://由于最后一个订阅者离开等待关闭流
+    case SEclose://关闭流
+    case UnsubscribeEvent://订阅者离开
+    case ISubscribe://订阅者进入
   }
 }
 var plugin = InstallPlugin(new(MyPluginConfig))

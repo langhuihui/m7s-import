@@ -60,7 +60,8 @@ export const sidebar = {
         { text: '拉流者', link: '/devel/puller' },
         { text: '订阅者', link: '/devel/subscriber' },
         { text: '推流者', link: '/devel/pusher' },
-        { text: '鉴权', link: '/devel/authentication' }
+        { text: '鉴权', link: '/devel/authentication' },
+        { text: '中间件', link: '/devel/middleware' }
       ]
     }
   ],
