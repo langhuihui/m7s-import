@@ -49,6 +49,18 @@
         span {
           color: #ffe300;
         }
+        ::v-deep {
+          .language-txt {
+            .line {
+              span {
+                width: 200px;
+                text-overflow: ellipsis;
+                display: inline-block;
+                overflow: hidden;
+              }
+            }
+          }
+        }
       }
       .item-4 {
         margin-top: 100px;
