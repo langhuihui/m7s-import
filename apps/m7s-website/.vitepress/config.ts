@@ -27,6 +27,7 @@ export const sidebar = {
         { text: 'jessica', link: '/guide/plugins/jessica' },
         { text: 'webrtc', link: '/guide/plugins/webrtc' },
         { text: 'webtransport', link: '/guide/plugins/webtransport' },
+        { text: 'fmp4', link: '/guide/plugins/fmp4' },
         { text: 'record', link: '/guide/plugins/record' },
         { text: 'debug', link: '/guide/plugins/debug' },
         { text: 'logrotate', link: '/guide/plugins/logrotate' },
@@ -34,7 +35,8 @@ export const sidebar = {
         { text: 'room', link: '/guide/plugins/room' },
         { text: 'preview', link: '/guide/plugins/preview' },
         { text: 'snap', link: '/guide/plugins/snap' },
-        { text: 'edge', link: '/guide/plugins/edge' }
+        { text: 'edge', link: '/guide/plugins/edge' },
+        { text: 'exporter', link: '/guide/plugins/exporter' },
       ]
     },
     {
@@ -44,6 +46,7 @@ export const sidebar = {
     {
       text: '常见问题',
       items: [
+        { text: '崩溃问题', link: '/guide/qa/error' },
         { text: '推流问题', link: '/guide/qa/push' },
         { text: '播放问题', link: '/guide/qa/play' }
       ]

@@ -8,6 +8,29 @@
   section {
     display: flex;
     justify-content: center;
+    .tab {
+      margin-top: 70px;
+      display: flex;
+      justify-content: space-between;
+      background: linear-gradient(
+        90deg,
+        #3a7fbd 0%,
+        rgba(58, 127, 189, 0) 100%
+      );
+      .item {
+        cursor: pointer;
+        width: 33%;
+        height: 104px;
+        text-align: center;
+        line-height: 104px;
+        font-size: 40px;
+        font-weight: 400;
+        color: #ffffff;
+        &.active {
+          background: linear-gradient(90deg, #626ee6 0%, #9895f6 100%);
+        }
+      }
+    }
     .box {
       width: 1200px;
       .title {
@@ -26,7 +49,7 @@
         }
       }
       .plugin-content {
-        margin-top: 70px;
+        // margin-top: 70px;
         display: flex;
         flex-wrap: wrap;
         .plugin-item {
@@ -61,28 +84,6 @@
       }
       .m7s-feature {
         margin-top: 70px;
-        .m7s-tab {
-          display: flex;
-          justify-content: space-between;
-          background: linear-gradient(
-            90deg,
-            #3a7fbd 0%,
-            rgba(58, 127, 189, 0) 100%
-          );
-          .item {
-            cursor: pointer;
-            width: 33%;
-            height: 104px;
-            text-align: center;
-            line-height: 104px;
-            font-size: 40px;
-            font-weight: 400;
-            color: #ffffff;
-            &.active {
-              background: linear-gradient(90deg, #626ee6 0%, #9895f6 100%);
-            }
-          }
-        }
         .m7s-item {
           margin-top: 92px;
           display: flex;

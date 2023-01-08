@@ -3,6 +3,7 @@ import { UrlEnum } from '@m7s/shared/types'
 import { ref, computed } from 'vue'
 import Roles from '../Roles.vue'
 const active = ref(0)
+const active2 = ref(0)
 const server = ref("localhost")
 const streamPath = ref("live/test")
 const pushProtocol = ref("rtmp")
@@ -18,12 +19,17 @@ const list = [
     title: '简单易用'
   }
 ]
+const list2 = ['官方插件','第三方开源','收费插件']
 const url = ref({
   ...UrlEnum,
 })
 
 function change(index: number) {
   active.value = index
+}
+
+function change2(index: number) {
+  active2.value = index
 }
 
 function init() {
@@ -39,6 +45,9 @@ init()
 
 function jump(url: string) {
   window.open(`https://github.com/Monibuca/${url}`)
+}
+function jump2(url: string) {
+  window.open(url)
 }
 function onChangeServer(evt: Event) {
   server.value = evt.target.value
@@ -82,13 +91,42 @@ const plugins = {
   hls: "1、提供HLS协议拉流播放。2、远程拉取HLS到m7s",
   gb28181: "GB28181协议拉流播放、查看录像",
   webrtc: "WebRTC协议的推流和拉流",
+  webtransport: "通过WebTransport进行推拉流",
   record: "hls、flv、mp4、裸流格式录制功能以及回放",
   hdl: "1、HTTP-FLV格式拉流播放。2、远程拉取HTTP-FLV到m7s",
+  jessica: "1、提供WS-FLV协议拉流播放。2、提供WS-RAW协议拉流播放。",
+  fmp4: "提供FMP4格式拉流播放",
   preview: "借助Jessibuca提供视频实时预览能力",
   snap: "提供对I帧的实时截图能力",
   room: "提供房间功能，可以向房间内用户广播信息",
-  hook: "提供API钩子回调能力，通知远程服务器"
+  hook: "提供API钩子回调能力，通知远程服务器",
+  exporter: "提供监控数据导出能力，支持Prometheus、InfluxDB、ElasticSearch",
+  logrotate: "提供日志轮转能力",
+  edge: "可以m7s实例作为边缘节点",
+  debug: "提供调试能力"
 }
+const plugins2 = [
+  {
+    name:"mpegts",
+    desc:"提供MPEG-TS格式拉流播放",
+    url:"https://github.com/kingecg/mpegts"
+  },
+  {
+    name:"虚位以待",
+    desc:"可联系作者添加到此列表",
+    url:""
+  }
+]
+const plugins3 = [
+  {
+    name:"transcode",
+    desc: "提供转码能力，可以将流转码为其他格式",
+  },
+  {
+    name:"虚位以待",
+    desc:"可联系作者添加到此列表",
+  }
+]
 </script>
 
 <template>
@@ -101,7 +139,7 @@ const plugins = {
           <img src="/images/m7s/title-bar.png" alt="">
         </div>
         <div class="m7s-feature">
-          <div class="m7s-tab">
+          <div class="tab">
             <div class="item" @click="change(index)" v-for="(item, index) in list" :class="active == index ? 'active' : ''">{{ item.title }}</div>
           </div>
           <div class="m7s-item" v-if="active == 0">
@@ -169,16 +207,28 @@ const plugins = {
           <div>插件生态</div>
           <img src="/images/m7s/title-bar.png" alt="">
         </div>
-        <div class="plugin-content">
+        <div class="tab">
+            <div class="item" @click="change2(index)" v-for="(item, index) in list2" :class="active2 == index ? 'active' : ''">{{ item }}</div>
+        </div>
+        <div class="plugin-content"  v-if="active2 == 0">
           <div class="plugin-item" @click="jump('plugin-' + name)" v-for="(item, name) in plugins">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
             <div class="plugin-item-title">plugin-{{ name }}</div>
             <div class="plugin-item-content">{{ item }}</div>
           </div>
-          <div class="plugin-item">
+        </div>
+        <div class="plugin-content"  v-if="active2 == 1">
+          <div class="plugin-item" @click="jump2(item.url)" v-for="(item, name) in plugins2">
             <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
-            <div class="plugin-item-title">自定义插件</div>
-            <div class="plugin-item-content">可便捷开发任意扩展功能的插件</div>
+            <div class="plugin-item-title">{{ item.name }}</div>
+            <div class="plugin-item-content">{{ item.desc }}</div>
+          </div>
+        </div>
+        <div class="plugin-content"  v-if="active2 == 2">
+          <div class="plugin-item" v-for="(item, name) in plugins3">
+            <img class="plugin-item-logo" src="/images/m7s/plugin.png" />
+            <div class="plugin-item-title">{{ item.name }}</div>
+            <div class="plugin-item-content">{{ item.desc }}</div>
           </div>
         </div>
       </div>
