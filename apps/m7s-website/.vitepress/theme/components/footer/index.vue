@@ -9,7 +9,7 @@ const showZf = ref(false)
     <div class="box">
       <div class="p1">
         <div class="item" >
-          <a href="https://opencollective.com/monibuca" target="_blank">Monibuca 开源社区</a>
+          <a href="https://opencollective.com/monibuca" style="color: #fff;" target="_blank">Monibuca 开源社区</a>
         </div>
         <div class="item">
           <div class="title">支持我们</div>
