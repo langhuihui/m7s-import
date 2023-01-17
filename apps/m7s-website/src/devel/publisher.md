@@ -12,6 +12,24 @@
 可以结合官方插件中对Publisher的使用，来掌握发布者的使用方法。
 :::
 
+## 发布时序图
+  
+```mermaid
+sequenceDiagram
+  Publisher ->> Plugin: Publish
+  Plugin -->> Publisher: set Config
+  Plugin ->> IO: receive
+  IO ->> Engine: findOrCreateStream
+  Engine -->> IO: set Stream
+  IO ->> IO: OnAuth
+  IO ->> Stream: Receive
+  Stream ->> Stream: send event to eventbus
+  Stream -->> IO: result
+  IO -->> Publisher: result
+  Track ->> Stream: AddTrack
+  Publisher ->> Track: Write
+```
+
 ## 定义发布者
 
 虽然可以直接使用 `Publisher` 作为发布者，但是通常我们需要自定义一个结构，里面包含 `Publisher`，这样就成为了一个特定功能的 `Publisher`。
@@ -117,9 +135,11 @@ pub.Stream.NewDataTrack(nil)//数据轨道
 ```go
 
 type Track interface {
-	GetName() string
+	GetBase() *Base
 	LastWriteTime() time.Time
+	SnapForJson()
 }
+
 type AVTrack interface {
 	Track
 	Attach()
@@ -128,29 +148,152 @@ type AVTrack interface {
 	WriteRTP([]byte)
 	WriteRTPPack(*rtp.Packet)
 	Flush()
+	SetSpeedLimit(int)
 }
 type VideoTrack interface {
 	AVTrack
 	GetDecoderConfiguration() DecoderConfiguration[NALUSlice]
 	CurrentFrame() *AVFrame[NALUSlice]
 	PreFrame() *AVFrame[NALUSlice]
-	WriteSlice(NALUSlice)
+	WriteSliceBytes(slice []byte)
 	WriteAnnexB(uint32, uint32, AnnexBFrame)
+	SetLostFlag()
 }
 
 type AudioTrack interface {
 	AVTrack
-	GetDecoderConfiguration() DecoderConfiguration[AudioSlice]
-	CurrentFrame() *AVFrame[AudioSlice]
-	PreFrame() *AVFrame[AudioSlice]
-	WriteSlice(AudioSlice)
+	GetDecoderConfiguration() DecoderConfiguration[[]byte]
+	CurrentFrame() *AVFrame[[]byte]
+	PreFrame() *AVFrame[[]byte]
 	WriteADTS([]byte)
+	WriteRaw(uint32, []byte)
 }
+
 ```
 对于不同的数据格式我们可以选择对应的写入方法，例如`rtmp`格式的数据，我们使用`WriteAVCC`来写入，
 RTP格式数据则可以选择`WriteRTP`或者`WriteRTPPack`来写入。
 视频还支持`AnnexB`格式写入，使用WriteAnnexB来写入。音频则支持`WriteADTS`来写入`ADTS`头信息。
-其他数据我们可以先获取到裸数据然后调用`WriteSlice`来写入。
+其他数据我们可以先获取到裸数据然后调用`WriteSliceBytes`来写入。
+
+`WriteAVCC` 的内部流程：
+```mermaid
+sequenceDiagram
+    RTMP/FLV  ->> H264: WriteAVCC
+    H264 ->> Ring: set SPS PPS
+    H264  ->>  Video: WriteAVCC
+    Video ->> Media: WriteAVCC
+    Media ->> Ring: AppendAVCC、set PTS DTS
+    Video ->> Video: WriteRawBytes
+    Video ->> Ring: AppendRaw
+    Video ->> Video: Flush    
+```
+
+`WriteAnnexB` 的内部流程：
+```mermaid
+sequenceDiagram
+  TS/PS  ->> Video: WriteAnnexB
+  Video ->> Video: WriteSliceBytes
+  Video ->> Ring: set iframe flag
+  Video ->> Video: Flush
+```
+
+`WriteRTP`以及`WriteRTPPack`的内部流程：
+```mermaid
+sequenceDiagram
+  RTSP/WebRTC  ->> Media: WriteRTPPack/WriteRTP
+  Media ->> Media: writeRTPFrame
+  Media ->> Track: WriteRTPFrame
+  Track ->> Video: WriteSliceBytes
+  Media ->> Video: Flush
+```
+
+Video.Flush 后半段的内部流程：（Track代表具体Track）
+```mermaid
+sequenceDiagram
+    Video ->> Video: compluteGop Attach
+    Video ->> Media: Flush
+    Media ->> Track: CompleteRTP
+    Track ->> Media: PacketizeRTP
+    Media ->> Ring: AppendRTP
+    Media ->> Track: CompleteAVCC
+    Track ->> Ring: AppendAVCC
+    Media ->> Base: Flush
+    Base ->> Base: ComputeBPS
+    Base ->> Ring: set Timestamp
+    Media ->> Ring: Step
+```
+
+Track 数据结构：（go里面没有继承，所有用组合的方式来实现）
+```mermaid
+classDiagram
+    Base <|-- Data
+    Base <|-- Media
+    Media <|-- Video
+    Media <|-- Audio
+    Video <|-- H264
+    Video <|-- H265
+    Audio <|-- AAC
+    Audio <|-- G711
+    Data: +LockRing[any] LockRing
+    Data: +Push(data any)
+    Data: +Play(ctx context.Context, onData func(any) error) error
+    class Base {
+      +Attached byte 
+      +Name string 
+      +Stream IStream 
+      ComputeBPS(bytes int)
+      Flush(bf *BaseFrame)
+    }
+    class Media {
+      +SampleRate uint32 
+      +SSRC uint32 
+      +AVRing[T]
+      +SpesificTrack[T]
+      +WriteAVCC(ts uint32, frame AVCCFrame)
+      +Flush()
+    }
+    class Video{
+      +CodecID     codec.VideoCodecID
+      +IDRing      *util.Ring[AVFrame[NALUSlice]]
+      +GOP         int 
+      +Attach()
+      +Detach()
+    }
+    class Audio{
+      +CodecID    codec.AudioCodecID
+	    +Channels   byte
+	    +SampleSize byte
+      +Profile byte
+      +Attach()
+      +Detach()
+      +WriteADTS()
+      +WriteRaw(pts uint32, raw []byte)
+      +WriteAVCC(ts uint32, frame AVCCFrame)
+      +CompleteAVCC(value *AVFrame[[]byte])
+      +CompleteRTP(value *AVFrame[[]byte])
+    }
+    class H264{
+      +WriteSliceBytes(slice []byte)
+      +WriteAVCC(ts uint32, frame AVCCFrame)
+      +WriteRTPFrame(frame *RTPFrame)
+      +CompleteRTP(value *AVFrame[NALUSlice]) 
+    }
+    class H265{
+      +WriteSliceBytes(slice []byte)
+      +WriteAVCC(ts uint32, frame AVCCFrame)
+      +WriteRTPFrame(frame *RTPFrame)
+      +CompleteRTP(value *AVFrame[NALUSlice]) 
+    }
+    class AAC{
+      +WriteAVCC(ts uint32, frame AVCCFrame)
+      +WriteRTPFrame(frame *RTPFrame)
+      +CompleteRTP(value *AVFrame[NALUSlice]) 
+    }
+    class G711{
+      +WriteAVCC(ts uint32, frame AVCCFrame)
+      +WriteRTPFrame(frame *RTPFrame)
+    }
+```
 
 ## 停止发布
 

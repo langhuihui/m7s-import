@@ -6,6 +6,19 @@
 可以结合官方插件中对Pusher的使用，来掌握推流者的使用方法。包含Pusher功能的插件有rtmp、rtsp
 :::
 
+## 推流时序图
+  
+```mermaid
+sequenceDiagram
+  Pusher ->> Plugin: Push
+  Plugin ->> Pusher: init(streamPath,url,config)
+loop
+  Plugin ->> Plugin: Subscribe
+  Plugin ->> Pusher: Connect
+  Plugin ->> Pusher: Push
+  Plugin ->> Pusher: Reconnet()
+end
+```
 
 ## 自定义推流者
 

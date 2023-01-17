@@ -6,7 +6,19 @@
 可以结合官方插件中对Puller的使用，来掌握拉流者的使用方法。包含Puller功能的插件有rtmp、rtsp、hls、hdl
 :::
 
-
+## 拉流时序图
+  
+```mermaid
+sequenceDiagram
+  Puller ->> Plugin: Pull
+  Plugin ->> Puller: init(streamPath,url,config)
+loop
+  Plugin ->> Puller: Connect
+  Plugin ->> Plugin: Publish
+  Plugin ->> Puller: Pull
+  Plugin ->> Puller: Reconnet()
+end
+```
 ## 自定义拉流者
 
 通常拉流者需要将拉过来的流发布到engine中，所以都会同时包含Publisher

@@ -8,6 +8,25 @@
 可以结合官方插件中对Subscriber的使用，来掌握订阅者的使用方法。
 :::
 
+## 订阅时序图
+  
+```mermaid
+sequenceDiagram
+  Subscriber ->> Plugin: Subscribe
+  Plugin -->> Subscriber: set Config
+  Plugin ->> IO: receive
+  IO ->> Engine: findOrCreateStream
+  Engine -->> IO: set Stream
+  IO ->> IO: OnAuth
+  IO ->> Stream: Receive
+  Stream ->> Stream: send event to publisher and eventbus
+  Stream ->> Subscriber: OnEvent(track)
+  Subscriber ->> Subscriber: AddTrack
+  Stream -->> IO: result
+  IO -->> Subscriber: result
+  Subscriber ->> Subscriber: PlayBlock
+```
+
 ## 定义订阅者
 
 虽然可以直接使用 `Subscriber` 作为订阅者，但是通常我们需要自定义一个结构，里面包含 `Subscriber`，这样就成为了一个特定功能的 `Subscriber`。
@@ -40,9 +59,11 @@ func (p *MySubscriber) OnEvent(event any) {
     case *track.Audio: //代表收到AudioTrack事件
     case *track.Video: //代表收到VideoTrack事件
     case *track.Data: //代表收到DataTrack事件
-    case *AudioFrame: //代表收到AudioFrame事件
-    case *VideoFrame: //代表收到VideoFrame事件
-    case HaveFLV: //代表收到含有FLV数据的帧事件,其中相当于包括了AudioFrame和VideoFrame
+    case *AudioFrame: //代表收到AudioFrame事件，使用raw订阅时会收到
+    case *VideoFrame: //代表收到VideoFrame事件，使用raw订阅时会收到
+    case FLVFrame: //代表收到含有FLV数据的帧事件,使用flv订阅时会收到
+    case VideoRTP: //收到了视频RTP包，使用rtp订阅时会收到
+    case AudioRTP: //收到了音频RTP包，使用rtp订阅时会收到
     default:
       p.Subscriber.OnEvent(event)
   }
@@ -86,15 +107,26 @@ if plugin.Subscribe("live/test", sub) == nil {
 一旦注册成功就会在OnEvent收到事件。
 
 ### 开始读取
+可以任选以下三种方式读取音视频数据，不同的读取方式收到的事件也不同的
 ```go
-sub.PlayBlock() 
+func (s *Subscriber) PlayRaw() {
+	s.PlayBlock(SUBTYPE_RAW)
+}
+
+func (s *Subscriber) PlayFLV() {
+	s.PlayBlock(SUBTYPE_FLV)
+}
+
+func (s *Subscriber) PlayRTP() {
+	s.PlayBlock(SUBTYPE_RTP)
+}
 ```
 
 如果没有其他逻辑要分离处理也可以直接调用下面这个方法
 ```go
-func (opt *Plugin) SubscribeBlock(streamPath string, sub ISubscriber) (err error) {
+func (opt *Plugin) SubscribeBlock(streamPath string, sub ISubscriber, t byte) (err error) {
 	if err = opt.Subscribe(streamPath, sub); err == nil {
-		sub.PlayBlock()
+		sub.PlayBlock(t)
 	}
 	return
 }
@@ -102,6 +134,8 @@ func (opt *Plugin) SubscribeBlock(streamPath string, sub ISubscriber) (err error
 从字面上就看出是阻塞读取数据。
 读取到的数据我们从OnEvent中去处理。
 如果订阅完成或者中途退出了，那么这个阻塞就会释放。
+
+
 
 ## 停止订阅
 

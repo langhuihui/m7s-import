@@ -32,6 +32,11 @@ global:
   subscribe:
       subaudio: true # 是否订阅音频流
       subvideo: true # 是否订阅视频流
+      subaudioargname: ats # 订阅音频轨道参数名
+      subvideoargname: vts # 订阅视频轨道参数名
+      subdataargname: dts # 订阅数据轨道参数名
+      subaudiotracks: [] # 订阅音频轨道名称列表
+      subvideotracks: [] # 订阅视频轨道名称列表
       iframeonly: false # 只订阅关键帧
       waittimeout: 10 # 等待发布者的秒数，用于订阅尚未发布的流
   rtpreorder : true # 启用RTP包乱序重排
@@ -40,7 +45,7 @@ global:
   enableauth: true # 启用鉴权,详细查看鉴权机制
   enablesubevent: true # 启用订阅事件，用于订阅者上下线事件,关闭可以提高性能
   rtpreoderbufferlen: 50 # rtp乱序重排缓存长度
-  speedlimit: 0 # 限速超时时间（毫秒）0为不限速，对于读取文件这类流需要限速，否则读取过快
+  speedlimit: 500 # 限速超时时间（毫秒）0为不限速，对于读取文件这类流需要限速，否则读取过快
   eventbussize: 10 # 事件总线缓存大小，事件较多时容易堵阻塞线程，需要增大缓存
   console: 
     server : console.monibuca.com:4242 # 连接远程控制台的地址
