@@ -8,7 +8,7 @@
 
 ## 拉流时序图
   
-```mermaid
+:::mermaid
 sequenceDiagram
   Puller ->> Plugin: Pull
   Plugin ->> Puller: init(streamPath,url,config)
@@ -18,7 +18,7 @@ loop
   Plugin ->> Puller: Pull
   Plugin ->> Puller: Reconnet()
 end
-```
+:::
 ## 自定义拉流者
 
 通常拉流者需要将拉过来的流发布到engine中，所以都会同时包含Publisher

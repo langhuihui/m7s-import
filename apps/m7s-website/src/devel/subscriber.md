@@ -10,7 +10,7 @@
 
 ## 订阅时序图
   
-```mermaid
+:::mermaid
 sequenceDiagram
   Subscriber ->> Plugin: Subscribe
   Plugin -->> Subscriber: set Config
@@ -25,7 +25,7 @@ sequenceDiagram
   Stream -->> IO: result
   IO -->> Subscriber: result
   Subscriber ->> Subscriber: PlayBlock
-```
+:::
 
 ## 定义订阅者
 

@@ -8,7 +8,7 @@
 
 ## 推流时序图
   
-```mermaid
+:::mermaid
 sequenceDiagram
   Pusher ->> Plugin: Push
   Plugin ->> Pusher: init(streamPath,url,config)
@@ -18,7 +18,7 @@ loop
   Plugin ->> Pusher: Push
   Plugin ->> Pusher: Reconnet()
 end
-```
+:::
 
 ## 自定义推流者
 

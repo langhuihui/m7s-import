@@ -25,5 +25,5 @@ snap:
 
 获取一帧截图，返回最新的I帧的jpg图片。
 例如m7s（localhost)中有流live/test,
-可以通过http://localhost:8080/snap/live/test 获取到该流的最新截图
+可以通过`http://localhost:8080/snap/live/test` 获取到该流的最新截图
 

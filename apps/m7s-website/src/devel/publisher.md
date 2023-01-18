@@ -14,7 +14,7 @@
 
 ## 发布时序图
   
-```mermaid
+:::mermaid
 sequenceDiagram
   Publisher ->> Plugin: Publish
   Plugin -->> Publisher: set Config
@@ -28,7 +28,7 @@ sequenceDiagram
   IO -->> Publisher: result
   Track ->> Stream: AddTrack
   Publisher ->> Track: Write
-```
+:::
 
 ## 定义发布者
 
@@ -176,7 +176,7 @@ RTP格式数据则可以选择`WriteRTP`或者`WriteRTPPack`来写入。
 其他数据我们可以先获取到裸数据然后调用`WriteSliceBytes`来写入。
 
 `WriteAVCC` 的内部流程：
-```mermaid
+::: mermaid
 sequenceDiagram
     RTMP/FLV  ->> H264: WriteAVCC
     H264 ->> Ring: set SPS PPS
@@ -186,29 +186,29 @@ sequenceDiagram
     Video ->> Video: WriteRawBytes
     Video ->> Ring: AppendRaw
     Video ->> Video: Flush    
-```
+:::
 
 `WriteAnnexB` 的内部流程：
-```mermaid
+::: mermaid
 sequenceDiagram
   TS/PS  ->> Video: WriteAnnexB
   Video ->> Video: WriteSliceBytes
   Video ->> Ring: set iframe flag
   Video ->> Video: Flush
-```
+:::
 
 `WriteRTP`以及`WriteRTPPack`的内部流程：
-```mermaid
+::: mermaid
 sequenceDiagram
   RTSP/WebRTC  ->> Media: WriteRTPPack/WriteRTP
   Media ->> Media: writeRTPFrame
   Media ->> Track: WriteRTPFrame
   Track ->> Video: WriteSliceBytes
   Media ->> Video: Flush
-```
+:::
 
 Video.Flush 后半段的内部流程：（Track代表具体Track）
-```mermaid
+::: mermaid
 sequenceDiagram
     Video ->> Video: compluteGop Attach
     Video ->> Media: Flush
@@ -221,10 +221,10 @@ sequenceDiagram
     Base ->> Base: ComputeBPS
     Base ->> Ring: set Timestamp
     Media ->> Ring: Step
-```
+:::
 
 Track 数据结构：（go里面没有继承，所有用组合的方式来实现）
-```mermaid
+::: mermaid
 classDiagram
     Base <|-- Data
     Base <|-- Media
@@ -293,7 +293,7 @@ classDiagram
       +WriteAVCC(ts uint32, frame AVCCFrame)
       +WriteRTPFrame(frame *RTPFrame)
     }
-```
+:::
 
 ## 停止发布
 

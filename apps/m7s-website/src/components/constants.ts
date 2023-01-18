@@ -1,3 +1,5 @@
+import { NavItem } from "@vue/theme/src/vitepress/config";
+
 const data = [
   { name: '首页', url: '/' },
   {
@@ -64,7 +66,7 @@ const data = [
       { name: '诞生故事', url: '/about/born' }
     ]
   }
-]
+];
 
 export const menu = data.slice(1).map((item) => {
   if (item.activeMatch) {
@@ -74,19 +76,23 @@ export const menu = data.slice(1).map((item) => {
         name: child.name,
         url: child.url + '.html'
       }))
-    }
-    return result
+    };
+    return result;
   }
-  return item
-})
-export const nav = data.map((item) => {
-  const result = {
+  return item;
+});
+export const nav = data.map<NavItem>((item) => {
+  if (item.children) {
+    return {
+      text: item.name,
+      items: item.children.map((child) => ({
+        text: child.name,
+        link: child.url
+      }))
+    };
+  }
+  return  {
     text: item.name,
     link: item.url,
-    items: item.children?.map((child) => ({
-      text: child.name,
-      link: child.url
-    }))
-  }
-  return result
-})
+  };
+});

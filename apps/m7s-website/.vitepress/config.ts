@@ -3,8 +3,7 @@ import { searchForWorkspaceRoot } from 'vite';
 import type { Config as ThemeConfig } from '@vue/theme';
 import baseConfig from '@vue/theme/config';
 import { headerPlugin } from './headerMdPlugin';
-import { nav } from './theme/components/constants';
-
+import { nav } from '../src/components/constants';
 export const sidebar = {
   '/guide/': [
     {
@@ -135,11 +134,11 @@ export default defineConfigWithTheme<ThemeConfig>({
     }
   },
 
-  markdown: {
-    config(md) {
-      md.use(headerPlugin);
-    }
-  },
+  // markdown: {
+  //   config(md) {
+  //     md.use(headerPlugin);
+  //   }
+  // },
 
   vite: {
     define: {
@@ -164,6 +163,9 @@ export default defineConfigWithTheme<ThemeConfig>({
     },
     build: {
       minify: 'terser',
+      // rollupOptions: {
+      //   external: ['@theme/components/M7S.vue'],
+      // },
       chunkSizeWarningLimit: Infinity
     },
     json: {
