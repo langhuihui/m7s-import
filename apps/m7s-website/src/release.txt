@@ -1,3 +1,7 @@
+# v4.4.1
+* 9cb7010 1、增加SErepublish事件表示再次发布成功事件，使得SEPublish事件表示第一次发布成功。 2、修复push时ReConnectCount没有计数增加。 3、使用github.com/quic-go/quic-go v0.32.0版本。 4、修复订阅模式>1时没有从IDR帧开始的问题。 5、RTMP插件修复推流时MessageStreamID没有设置的问题。 6、RTSP插件升级第三方依赖库aler9/gortsplib 到 v2.1.0，并进行适配。 7、Stream中将保存状态变更历史信息。
+
+
 # v4.4.0
 * 8d5c6d6 增加时光回溯功能 订阅模式参数 内存回收机制 增加对时间长度的配置 解决首屏渲染无音频问题 修复rtmp对外推拉没有带入参数 修复dts生成时pts超过最大值导致错误的问题 修复rtmp解析时对扩展时间戳的处理 修复几处判空panic问题
 
