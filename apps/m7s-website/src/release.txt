@@ -1,3 +1,7 @@
+# v4.4.2
+* 7dc8966 1、当发布者离线时没有订阅者时，流的超时时间从1s改为10ms。 2、Track增加离线状态，当发布者离线时，Track状态改为离线状态，当发布者重新上线时，Track状态改为在线状态。 3、Track在恢复在线后，记录时间戳的差值，保持后续时间戳和之前的连续。 4、进一步优化订阅者读取音视频同步逻辑。
+
+
 # v4.4.1
 * 9cb7010 1、增加SErepublish事件表示再次发布成功事件，使得SEPublish事件表示第一次发布成功。 2、修复push时ReConnectCount没有计数增加。 3、使用github.com/quic-go/quic-go v0.32.0版本。 4、修复订阅模式>1时没有从IDR帧开始的问题。 5、RTMP插件修复推流时MessageStreamID没有设置的问题。 6、RTSP插件升级第三方依赖库aler9/gortsplib 到 v2.1.0，并进行适配。 7、Stream中将保存状态变更历史信息。
 
