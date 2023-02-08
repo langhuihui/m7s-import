@@ -1,3 +1,7 @@
+# v4.4.4
+* 97f7d6a 修复WriteTimeout传入时多乘以了Second 修复订阅RTP时无音频是的panic WriteAVCC传入指针防止意外
+
+
 # v4.4.3
 * bf18453 1、引入ClockRate, 用于RTSP的RTP时间戳处理（MPEG2中的时间戳是固定90KHZ） 2、修复控制流Sleep传入的时间单位错误 3、优化TS格式解析内存复用，减少内存分配 4、修复rtmp接续发布功能 5、修复录像插件写入MP4文件时，视频格式错误的问题 6、更新WebTansport的插件的quic-go依赖，用于适配go1.20
 
