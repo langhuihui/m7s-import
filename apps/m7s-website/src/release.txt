@@ -1,3 +1,7 @@
+# v4.4.5
+* 0b5c36b 1、修复linux下没有生成fatal.log的问题 2、fatal.log现在采用追加方式写入 3、优化HLS（ts文件）内存复用 4、修复rtmp协议在接收推流时时间戳生成错误导致内存泄露等问题 5、修复datatrack没有被广播的bug（引起房间demo无法接收到信息）
+
+
 # v4.4.4
 * 97f7d6a 修复WriteTimeout传入时多乘以了Second 修复订阅RTP时无音频是的panic WriteAVCC传入指针防止意外
 
