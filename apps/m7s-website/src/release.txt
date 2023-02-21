@@ -1,3 +1,7 @@
+# v4.4.7
+* e6f73e7 修复WriteADTS没有写入时间戳的bug 修复webrtc推流时payloadType错误问题 修复GB28181的invite报文格式，以及ps流处理
+
+
 # v4.4.6
 * 9c27886 修复MP4录制，gb解析ps重写，rtmp插件握手兼容性
 
