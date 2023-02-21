@@ -1,3 +1,7 @@
+# v4.4.8
+* 3cd643f 修复webrtc推流错误 webrtc插件增加推流测试页面 HLS插件音视频分离 GB28181插件invite恢复使用通道ID，以及合入PR等
+
+
 # v4.4.7
 * e6f73e7 修复WriteADTS没有写入时间戳的bug 修复webrtc推流时payloadType错误问题 修复GB28181的invite报文格式，以及ps流处理
 
