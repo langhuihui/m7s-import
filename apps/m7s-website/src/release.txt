@@ -1,3 +1,7 @@
+# v4.4.11
+* eaa3904 将ps流接收后发布逻辑移入engine中，frame中新增adts数据
+
+
 # v4.4.10
 * dcfb354 1、优化了rtp包写入引擎时的内存复用机制 2、优化了webrtc插件 3、订阅时接收的VideoFrame和AudioFrame增加了track属性方便读取track中的数据 4、优化了push的重连逻辑以及终止重连的判断 5、获取annexb格式时如果是关键帧则自动带上sps等
 
