@@ -1,3 +1,7 @@
+# v4.4.13
+* 56918b5 1、WebRTC订阅AAC流时将AAC通过DataChannel传输 2、Rtmp协议接收releaseStream时不再回复client 3、优化RTSP的AAC数据的解析 4、修复RTSP出错写日志时Panic的问题 5、engine启动插件循序遵循插件注册顺序
+
+
 # v4.4.12
 * b9e74c1 修复gb无法获取通道的问题
 
