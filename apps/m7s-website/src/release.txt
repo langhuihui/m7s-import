@@ -1,3 +1,7 @@
+# v4.4.16
+* ba0c2fb 修复avcc写入时间戳的bug，webrtc插件支持tcp连接方式
+
+
 # v4.4.15
 * 0c714cc GB插件引用的rtp从v2改回v1，engine做相应修改 对room和webrtc做了一些修改，针对room的demo进行优化 对preview插件的流列表增加了类型显示
 
