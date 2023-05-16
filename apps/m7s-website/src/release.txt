@@ -1,3 +1,7 @@
+# v4.5.8
+* 555b168 1. Add the global configuration item disableall to disable all plugins (a plugin can be individually enabled by configuring its enable) 2. Upgrade dataTrack to customTrack and freely add custom tracks 3. PS plugin adds a forwarding mode configuration item and the ability to pull PS streams through the ws protocol 4. Fix processing errors when dts exceeds the maximum value
+
+
 # v4.5.7
 * f2e0963 1. Add a new PS plugin, move PS processing logic into it, and provide APIs to connect to PS streams 2. Added idletimeout configuration, which can be used to automatically disconnect after the first idle release 3. Handling situations where subscribers consume too slowly 4. Optimize RTMP plugin and merge write operations 5. Snap plugin adds support for URL parameters 6. Fix plugin reference errors used when publishing monitor plugins 7. The default certificate configuration for the webtransport plugin is local.monibuca.com
 
