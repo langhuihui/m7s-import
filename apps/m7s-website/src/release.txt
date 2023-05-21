@@ -1,3 +1,7 @@
+# v4.5.9
+* 2a89629 fix: change tracks to sync.Map to void dead lock fix: ps plugin dump fix: record plugin nil pointer feat: config support yaml tag name
+
+
 # v4.5.8
 * 555b168 1. Add the global configuration item disableall to disable all plugins (a plugin can be individually enabled by configuring its enable) 2. Upgrade dataTrack to customTrack and freely add custom tracks 3. PS plugin adds a forwarding mode configuration item and the ability to pull PS streams through the ws protocol 4. Fix processing errors when dts exceeds the maximum value
 
