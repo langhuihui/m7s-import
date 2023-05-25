@@ -1,3 +1,7 @@
+# v4.6.0
+* dd01ce0 1. Modifying the engine Streams global variable to sync.Map increases stability and performance 2. Add record plugin to record raw audio data function 3. Fix security issues where API reading log files may access files outside of the log directory 4. Fix noise issue during GB streaming sound playback 5. Fix a memory leak 6. The GB28181 plugin combines a PR for API query of video recordings and directly returns data, no longer through Channel data 7. GB28181 plugin list returns no more nulls 8. On demand pull and push trigger logic code optimization 9. Debug plugin adds HTTP configuration
+
+
 # v4.5.9
 * 2a89629 fix: change tracks to sync.Map to void dead lock fix: ps plugin dump fix: record plugin nil pointer feat: config support yaml tag name
 
