@@ -1,3 +1,7 @@
+# v4.6.2
+* a9c4334 -Start the project and introduce the conf directory, adding several common configuration examples -Customizable favicon.ico -Adding Pause and Resume methods to Stream in the engine -The engine introduces sync.Cond to replace the pseudo Spinlock -Preview plugin introduction jessibuca pro demo -Jessica plugin introduces support for HTTP/ws-h264/h265 bare streams -Recording plugin adds a prompt in the log when the file cannot be created -PS plugin fixes a bug where a single port cannot be reused after use -Webtransport starts by default through built-in certificate mode
+
+
 # v4.6.1
 * ebc7e90 1 新增LL-HLS支持
 
