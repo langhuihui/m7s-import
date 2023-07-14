@@ -1,3 +1,7 @@
+# v4.6.7
+* 52bd4c5 - fix: record flv append not work - fix: data track reader - feat: ignore auth for internal subscriber - chore: optimize webrtc subscribe
+
+
 # v4.6.6
 * e5c9cac fix: - data track push data panic - g711 new track attach block - didn't stop all publisher and subscriber when rtmp closed - ps-plugin audio not enabled
 
