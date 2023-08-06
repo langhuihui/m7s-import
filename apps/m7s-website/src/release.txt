@@ -1,3 +1,7 @@
+# v4.6.8
+* 8e5bcce - Refactoring the Record plugin to support mp4 format (non fmp4) - Optimize HLS plugin memory usage - Change the default remote streaming of RTSP to TCP protocol - Reason for subscriber closure increase closure - Reconstruct the summary to reduce invalid collection and prevent concurrent reads and writes - Add API for mandatory closure of subscribers - Remote streaming encountered an unreachable address and will no longer retry indefinitely
+
+
 # v4.6.7
 * 52bd4c5 - fix: record flv append not work - fix: data track reader - feat: ignore auth for internal subscriber - chore: optimize webrtc subscribe
 
