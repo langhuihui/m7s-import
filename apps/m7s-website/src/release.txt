@@ -1,3 +1,7 @@
+# v4.6.9
+* 5a7aec0 fix: plugin-hls version must be 4.3.3
+
+
 # v4.6.8
 * a711669 - Refactoring the Record plugin to support mp4 format (non fmp4) - Optimize HLS plugin memory usage - Change the default remote streaming of RTSP to TCP protocol - Reason for subscriber closure increase closure - Reconstruct the summary to reduce invalid collection and prevent concurrent reads and writes - Add API for mandatory closure of subscribers - Remote streaming encountered an unreachable address and will no longer retry indefinitely
 
