@@ -1,4 +1,8 @@
 # v4.6.10-beta0818
+* c64f19b feat: engine subscribe config add syncMode, hls plugin add preload mode fix: record panic when stop
+
+
+# v4.6.10-beta0818
 * f41dfeb feat: engine subscribe config add syncMode, hls plugin add preload mode fix: record panic when stop
 
 
