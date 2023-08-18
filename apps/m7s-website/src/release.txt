@@ -1,3 +1,7 @@
+# v4.6.10-beta0818
+* f41dfeb feat: engine subscribe config add syncMode, hls plugin add preload mode fix: record panic when stop
+
+
 # v4.6.9
 * 5a7aec0 fix: plugin-hls version must be 4.3.3
 
