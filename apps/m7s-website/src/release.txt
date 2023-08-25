@@ -1,3 +1,7 @@
+# v4.6.10
+* e8dbdb4 fix: engine Run func - fix receive panic - fix ps decode memory leak - gortsplib upgrade to v3.10.0
+
+
 # v4.6.10-beta0821
 * 2d1acf6 fix: engine Run func
 
