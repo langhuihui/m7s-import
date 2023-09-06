@@ -1,3 +1,7 @@
+# v4.6.11-beta09061418
+* 9933950 feat: gb的 channel增加输出字段，fix summary timeout
+
+
 # v4.6.11-beta09061356
 * 9870bb6 feat: gb的 channel增加输出字段，fix summary timeout
 
