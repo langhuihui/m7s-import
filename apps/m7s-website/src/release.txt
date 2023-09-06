@@ -1,3 +1,7 @@
+# v4.6.11-beta09061356
+* 9870bb6 feat: gb的 channel增加输出字段，fix summary timeout
+
+
 # v4.6.11-beta08310905
 * 7d5b0fb fix: rtsp 修复错误的流地址导致的Disconnect时panic
 
