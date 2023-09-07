@@ -1,3 +1,7 @@
+# v4.6.11-beta09071313
+* dfd9af1 fix: ps解析异常 tcp 逻辑，avoid repull too fast
+
+
 # v4.6.11-beta09061418
 * 9933950 feat: gb的 channel增加输出字段，fix summary timeout
 
